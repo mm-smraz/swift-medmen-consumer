@@ -54,6 +54,11 @@ class WebViewController: UIViewController {
         let appVersion = AppInfo.versionNumber
         let config = WKWebViewConfiguration()
         config.applicationNameForUserAgent = "MedMen/\(appVersion)"
+
+        config.userContentController = WKUserContentController()
+        config.userContentController.add(self, name: "mainSite")
+        config.userContentController.add(self, name: "storeSite")
+
         webView = WKWebView(frame: CGRect.zero, configuration: config)
         webView.backgroundColor = .white
         webView.translatesAutoresizingMaskIntoConstraints = false
@@ -162,6 +167,16 @@ extension WebViewController: WKNavigationDelegate {
     }
 }
 
+// MARK: - WKScriptMessageHandler
+
+extension WebViewController: WKScriptMessageHandler {
+
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print("navigationMessage: \(message)")
+    }
+
+}
+
 
 extension WKNavigationType: CustomStringConvertible {
     public var description: String {
@@ -174,5 +189,11 @@ extension WKNavigationType: CustomStringConvertible {
         case .other: return "other"
         @unknown default: return "unknown"
         }
+    }
+}
+
+extension WKScriptMessage {
+    open override var description: String {
+        return "WKScriptMessage name: \(self.name), body: \(self.body)"
     }
 }
