@@ -138,14 +138,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDV-jp-jgx">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="c3g-nb-M3S">
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="color" name="mmPrimaryRed"/>
@@ -154,12 +146,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SDV-jp-jgx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3BB-2g-fWK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SDV-jp-jgx" secondAttribute="bottom" id="ddx-kj-TF0"/>
                             <constraint firstItem="c3g-nb-M3S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ejD-2i-Rl5"/>
                             <constraint firstItem="c3g-nb-M3S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gYz-VS-VTE"/>
-                            <constraint firstAttribute="trailing" secondItem="SDV-jp-jgx" secondAttribute="trailing" id="kTP-SB-klz"/>
-                            <constraint firstItem="SDV-jp-jgx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qol-xy-4xk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qk3-sE-PAr">
@@ -187,7 +175,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ai" destination="c3g-nb-M3S" id="Byf-4Z-aw8"/>
-                        <outlet property="webView" destination="SDV-jp-jgx" id="ras-C7-54I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -200,7 +187,7 @@
         <image name="icon_storePickup" width="26" height="23"/>
         <image name="medmenPotLeaf" width="32" height="32"/>
         <namedColor name="mmPrimaryRed">
-            <color red="0.66666666666666663" green="0.12156862745098039" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.66699999570846558" green="0.12200000137090683" blue="0.086000002920627594" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

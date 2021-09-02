@@ -18,7 +18,7 @@ class WebViewController: UIViewController {
     weak var delegate: WebViewControllerDelegate?
 
     @IBOutlet private weak var ai: UIActivityIndicatorView!
-    @IBOutlet private weak var webView: WKWebView! {
+    private var webView: WKWebView! {
         didSet {
             webView.uiDelegate = self
             webView.navigationDelegate = self
@@ -50,6 +50,20 @@ class WebViewController: UIViewController {
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
+
+        let appVersion = AppInfo.versionNumber
+        let config = WKWebViewConfiguration()
+        config.applicationNameForUserAgent = "MedMen/\(appVersion)"
+        webView = WKWebView(frame: CGRect.zero, configuration: config)
+        webView.backgroundColor = .white
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.insertSubview(webView, at: 0)
+        NSLayoutConstraint.activate([
+            self.view.safeAreaLayoutGuide.topAnchor.constraint(equalTo: webView.topAnchor),
+            self.view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: webView.bottomAnchor),
+            self.view.leftAnchor.constraint(equalTo: webView.leftAnchor),
+            self.view.rightAnchor.constraint(equalTo: webView.rightAnchor)
+        ])
 
         reloadInitURL()
     }
