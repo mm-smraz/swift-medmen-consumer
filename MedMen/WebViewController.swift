@@ -18,7 +18,7 @@ class WebViewController: UIViewController {
     weak var delegate: WebViewControllerDelegate?
 
     @IBOutlet private weak var ai: UIActivityIndicatorView!
-    @IBOutlet private weak var webView: WKWebView! {
+    private var webView: WKWebView! {
         didSet {
             webView.uiDelegate = self
             webView.navigationDelegate = self
@@ -51,6 +51,25 @@ class WebViewController: UIViewController {
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
 
+        let appVersion = AppInfo.versionNumber
+        let config = WKWebViewConfiguration()
+        config.applicationNameForUserAgent = "MedMen/\(appVersion)"
+
+        config.userContentController = WKUserContentController()
+        config.userContentController.add(self, name: "mainSite")
+        config.userContentController.add(self, name: "storeSite")
+
+        webView = WKWebView(frame: CGRect.zero, configuration: config)
+        webView.backgroundColor = .white
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.insertSubview(webView, at: 0)
+        NSLayoutConstraint.activate([
+            self.view.safeAreaLayoutGuide.topAnchor.constraint(equalTo: webView.topAnchor),
+            self.view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: webView.bottomAnchor),
+            self.view.leftAnchor.constraint(equalTo: webView.leftAnchor),
+            self.view.rightAnchor.constraint(equalTo: webView.rightAnchor)
+        ])
+
         reloadInitURL()
     }
 
@@ -73,6 +92,59 @@ class WebViewController: UIViewController {
 
 extension WebViewController: WKUIDelegate {
 
+    // For JS alert(message)
+    func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo,
+                 completionHandler: @escaping () -> Void) {
+
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            completionHandler()
+        }))
+
+        present(alertController, animated: true, completion: nil)
+    }
+
+    // For JS confirm(message)
+    func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo,
+                 completionHandler: @escaping (Bool) -> Void) {
+
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            completionHandler(true)
+        }))
+
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action) in
+            completionHandler(false)
+        }))
+
+        present(alertController, animated: true, completion: nil)
+    }
+
+    // For JS prompt(text, defaultText)
+    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo,
+                 completionHandler: @escaping (String?) -> Void) {
+
+        let alertController = UIAlertController(title: nil, message: prompt, preferredStyle: .alert)
+
+        alertController.addTextField { (textField) in
+            textField.text = defaultText
+        }
+
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            if let text = alertController.textFields?.first?.text {
+                completionHandler(text)
+            } else {
+                completionHandler(defaultText)
+            }
+        }))
+
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action) in
+            completionHandler(nil)
+        }))
+
+        present(alertController, animated: true, completion: nil)
+    }
 
 }
 
@@ -95,6 +167,16 @@ extension WebViewController: WKNavigationDelegate {
     }
 }
 
+// MARK: - WKScriptMessageHandler
+
+extension WebViewController: WKScriptMessageHandler {
+
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print("navigationMessage: \(message)")
+    }
+
+}
+
 
 extension WKNavigationType: CustomStringConvertible {
     public var description: String {
@@ -107,5 +189,11 @@ extension WKNavigationType: CustomStringConvertible {
         case .other: return "other"
         @unknown default: return "unknown"
         }
+    }
+}
+
+extension WKScriptMessage {
+    open override var description: String {
+        return "WKScriptMessage name: \(self.name), body: \(self.body)"
     }
 }
