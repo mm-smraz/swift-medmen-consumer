@@ -7,6 +7,9 @@
 
 import Foundation
 
+// swiftlint:disable force_unwrapping
+// swiftlint:disable force_cast
+
 enum AppInfo {
 
     private static var infoDict: [String: Any] {

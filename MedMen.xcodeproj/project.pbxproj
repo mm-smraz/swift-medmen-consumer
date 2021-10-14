@@ -3,35 +3,71 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10F262956CB0988E42427418 /* Pods_MedMen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A7D6BCB683003AB5D61C71 /* Pods_MedMen.framework */; };
 		23262DCA26BA7A27006A9972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DC926BA7A27006A9972 /* AppDelegate.swift */; };
-		23262DCC26BA7A27006A9972 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DCB26BA7A27006A9972 /* SceneDelegate.swift */; };
 		23262DD126BA7A27006A9972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23262DCF26BA7A27006A9972 /* Main.storyboard */; };
 		23262DD326BA7A33006A9972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23262DD226BA7A33006A9972 /* Assets.xcassets */; };
 		23262DD626BA7A33006A9972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23262DD426BA7A33006A9972 /* LaunchScreen.storyboard */; };
-		23262DDF26BA7AE8006A9972 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DDE26BA7AE8006A9972 /* MainTabBarController.swift */; };
 		23262DE326BA7B23006A9972 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DE226BA7B23006A9972 /* WebViewController.swift */; };
 		23262DE826BA82B2006A9972 /* MMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DE726BA82B2006A9972 /* MMConstants.swift */; };
 		23262DEB26BAD461006A9972 /* FakeTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DEA26BAD461006A9972 /* FakeTabController.swift */; };
+		23543E3026F4B59B00E20D44 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23543E2F26F4B59B00E20D44 /* Colors.xcassets */; };
+		23543E3426F4B73500E20D44 /* UIColor+MM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E3326F4B73500E20D44 /* UIColor+MM.swift */; };
+		23543E3926F8CDA100E20D44 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E3826F8CDA100E20D44 /* Environment.swift */; };
+		23543E4326F8D27700E20D44 /* UserDefaults+MM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E4226F8D27700E20D44 /* UserDefaults+MM.swift */; };
+		23543E4826F9C76500E20D44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DC926BA7A27006A9972 /* AppDelegate.swift */; };
+		23543E4926F9C76500E20D44 /* MMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DE726BA82B2006A9972 /* MMConstants.swift */; };
+		23543E4A26F9C76500E20D44 /* FakeTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DEA26BAD461006A9972 /* FakeTabController.swift */; };
+		23543E4B26F9C76500E20D44 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E3826F8CDA100E20D44 /* Environment.swift */; };
+		23543E4D26F9C76500E20D44 /* UIColor+MM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E3326F4B73500E20D44 /* UIColor+MM.swift */; };
+		23543E4E26F9C76500E20D44 /* UserDefaults+MM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E4226F8D27700E20D44 /* UserDefaults+MM.swift */; };
+		23543E4F26F9C76500E20D44 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DE226BA7B23006A9972 /* WebViewController.swift */; };
+		23543E5026F9C76500E20D44 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361B5AE26E0A6770041DD95 /* AppInfo.swift */; };
+		23543E5326F9C76500E20D44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23262DD426BA7A33006A9972 /* LaunchScreen.storyboard */; };
+		23543E5426F9C76500E20D44 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23543E2F26F4B59B00E20D44 /* Colors.xcassets */; };
+		23543E5526F9C76500E20D44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23262DD226BA7A33006A9972 /* Assets.xcassets */; };
+		23543E5626F9C76500E20D44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23262DCF26BA7A27006A9972 /* Main.storyboard */; };
+		23543E6C26F9D42200E20D44 /* DebugController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E6A26F9D42200E20D44 /* DebugController.swift */; };
+		23543E7326F9D44E00E20D44 /* FakeTabController+DebugController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E7126F9D44E00E20D44 /* FakeTabController+DebugController.swift */; };
+		23543E7926F9D53700E20D44 /* MedMenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E7826F9D53700E20D44 /* MedMenViewController.swift */; };
+		23543E7A26F9D53700E20D44 /* MedMenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E7826F9D53700E20D44 /* MedMenViewController.swift */; };
 		2361B5AF26E0A6780041DD95 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361B5AE26E0A6770041DD95 /* AppInfo.swift */; };
+		23C1927A26FB7E6800DCDD2A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C1927926FB7E6800DCDD2A /* R.generated.swift */; };
+		23C1927B26FB7E6800DCDD2A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C1927926FB7E6800DCDD2A /* R.generated.swift */; };
+		9DB285408F4D617C2212F86B /* Pods_MedMenQA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B75FCC2F378919C73738C2 /* Pods_MedMenQA.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04A7D6BCB683003AB5D61C71 /* Pods_MedMen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedMen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FC8ACAD04A51619DE0086D2 /* Pods-MedMenQA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMenQA.debug.xcconfig"; path = "Target Support Files/Pods-MedMenQA/Pods-MedMenQA.debug.xcconfig"; sourceTree = "<group>"; };
 		23262DC626BA7A27006A9972 /* MedMen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedMen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23262DC926BA7A27006A9972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23262DCB26BA7A27006A9972 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		23262DD026BA7A27006A9972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23262DD226BA7A33006A9972 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23262DD526BA7A33006A9972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23262DD726BA7A33006A9972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23262DDE26BA7AE8006A9972 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		23262DE226BA7B23006A9972 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		23262DE726BA82B2006A9972 /* MMConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMConstants.swift; sourceTree = "<group>"; };
 		23262DEA26BAD461006A9972 /* FakeTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTabController.swift; sourceTree = "<group>"; };
+		23543E2F26F4B59B00E20D44 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		23543E3326F4B73500E20D44 /* UIColor+MM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+MM.swift"; sourceTree = "<group>"; };
+		23543E3826F8CDA100E20D44 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		23543E4226F8D27700E20D44 /* UserDefaults+MM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+MM.swift"; sourceTree = "<group>"; };
+		23543E5A26F9C76500E20D44 /* MedMenQA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedMenQA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23543E5B26F9C76500E20D44 /* InfoQA.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InfoQA.plist; sourceTree = "<group>"; };
+		23543E6A26F9D42200E20D44 /* DebugController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugController.swift; sourceTree = "<group>"; };
+		23543E7126F9D44E00E20D44 /* FakeTabController+DebugController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FakeTabController+DebugController.swift"; sourceTree = "<group>"; };
+		23543E7826F9D53700E20D44 /* MedMenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedMenViewController.swift; sourceTree = "<group>"; };
 		2361B5AE26E0A6770041DD95 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		23C1927926FB7E6800DCDD2A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		92B75FCC2F378919C73738C2 /* Pods_MedMenQA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedMenQA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ED563477ACD905F69632B14 /* Pods-MedMenQA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMenQA.release.xcconfig"; path = "Target Support Files/Pods-MedMenQA/Pods-MedMenQA.release.xcconfig"; sourceTree = "<group>"; };
+		E5EB78B7CE596EE0ECCDC7CA /* Pods-MedMen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMen.release.xcconfig"; path = "Target Support Files/Pods-MedMen/Pods-MedMen.release.xcconfig"; sourceTree = "<group>"; };
+		ED031232D7D5DC2334F3D1BE /* Pods-MedMen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMen.debug.xcconfig"; path = "Target Support Files/Pods-MedMen/Pods-MedMen.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +75,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10F262956CB0988E42427418 /* Pods_MedMen.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23543E5126F9C76500E20D44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DB285408F4D617C2212F86B /* Pods_MedMenQA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		107B2EC0D4A7383A29F45121 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04A7D6BCB683003AB5D61C71 /* Pods_MedMen.framework */,
+				92B75FCC2F378919C73738C2 /* Pods_MedMenQA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		23262DBD26BA7A27006A9972 = {
 			isa = PBXGroup;
 			children = (
 				23262DC826BA7A27006A9972 /* MedMen */,
 				23262DC726BA7A27006A9972 /* Products */,
+				819896348EBE06056CACFB84 /* Pods */,
+				107B2EC0D4A7383A29F45121 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				23262DC626BA7A27006A9972 /* MedMen.app */,
+				23543E5A26F9C76500E20D44 /* MedMenQA.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,18 +122,76 @@
 			isa = PBXGroup;
 			children = (
 				23262DC926BA7A27006A9972 /* AppDelegate.swift */,
-				23262DCB26BA7A27006A9972 /* SceneDelegate.swift */,
-				23262DE726BA82B2006A9972 /* MMConstants.swift */,
 				2361B5AE26E0A6770041DD95 /* AppInfo.swift */,
-				23262DDE26BA7AE8006A9972 /* MainTabBarController.swift */,
-				23262DEA26BAD461006A9972 /* FakeTabController.swift */,
-				23262DE226BA7B23006A9972 /* WebViewController.swift */,
-				23262DCF26BA7A27006A9972 /* Main.storyboard */,
-				23262DD226BA7A33006A9972 /* Assets.xcassets */,
-				23262DD426BA7A33006A9972 /* LaunchScreen.storyboard */,
+				23543E5B26F9C76500E20D44 /* InfoQA.plist */,
 				23262DD726BA7A33006A9972 /* Info.plist */,
+				23543E3F26F8CE4000E20D44 /* Resources */,
+				23543E3626F8CD9500E20D44 /* Core */,
+				23543E3D26F8CDF200E20D44 /* Extensions */,
+				23543E3C26F8CDDD00E20D44 /* Screens */,
 			);
 			path = MedMen;
+			sourceTree = "<group>";
+		};
+		23543E3626F8CD9500E20D44 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				23262DE726BA82B2006A9972 /* MMConstants.swift */,
+				23543E3826F8CDA100E20D44 /* Environment.swift */,
+				23543E7D26F9D53E00E20D44 /* BaseViewControllers */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		23543E3C26F8CDDD00E20D44 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				23262DD426BA7A33006A9972 /* LaunchScreen.storyboard */,
+				23262DCF26BA7A27006A9972 /* Main.storyboard */,
+				23262DEA26BAD461006A9972 /* FakeTabController.swift */,
+				23543E7126F9D44E00E20D44 /* FakeTabController+DebugController.swift */,
+				23262DE226BA7B23006A9972 /* WebViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		23543E3D26F8CDF200E20D44 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				23543E3326F4B73500E20D44 /* UIColor+MM.swift */,
+				23543E4226F8D27700E20D44 /* UserDefaults+MM.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		23543E3F26F8CE4000E20D44 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23C1927926FB7E6800DCDD2A /* R.generated.swift */,
+				23262DD226BA7A33006A9972 /* Assets.xcassets */,
+				23543E2F26F4B59B00E20D44 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		23543E7D26F9D53E00E20D44 /* BaseViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				23543E7826F9D53700E20D44 /* MedMenViewController.swift */,
+				23543E6A26F9D42200E20D44 /* DebugController.swift */,
+			);
+			path = BaseViewControllers;
+			sourceTree = "<group>";
+		};
+		819896348EBE06056CACFB84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED031232D7D5DC2334F3D1BE /* Pods-MedMen.debug.xcconfig */,
+				E5EB78B7CE596EE0ECCDC7CA /* Pods-MedMen.release.xcconfig */,
+				1FC8ACAD04A51619DE0086D2 /* Pods-MedMenQA.debug.xcconfig */,
+				9ED563477ACD905F69632B14 /* Pods-MedMenQA.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +201,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23262DDA26BA7A33006A9972 /* Build configuration list for PBXNativeTarget "MedMen" */;
 			buildPhases = (
+				09A884EF4031F6F902A6AC10 /* [CP] Check Pods Manifest.lock */,
+				23C1927626FB7DDF00DCDD2A /* R.swift */,
 				23262DC226BA7A27006A9972 /* Sources */,
 				23262DC326BA7A27006A9972 /* Frameworks */,
 				23262DC426BA7A27006A9972 /* Resources */,
+				23C1927E26FB816400DCDD2A /* Swift Lint */,
+				7F6B60A15433B73A3CDA695E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -97,6 +216,27 @@
 			name = MedMen;
 			productName = MedMen;
 			productReference = 23262DC626BA7A27006A9972 /* MedMen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		23543E4626F9C76500E20D44 /* MedMenQA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23543E5726F9C76500E20D44 /* Build configuration list for PBXNativeTarget "MedMenQA" */;
+			buildPhases = (
+				CFA58DF397FF73CA87804907 /* [CP] Check Pods Manifest.lock */,
+				23C1927526FB7D5E00DCDD2A /* R.swift */,
+				23543E4726F9C76500E20D44 /* Sources */,
+				23543E5126F9C76500E20D44 /* Frameworks */,
+				23543E5226F9C76500E20D44 /* Resources */,
+				23C1927F26FB817600DCDD2A /* ShellScript */,
+				3ED80722790465CFEC50CFE0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MedMenQA;
+			productName = MedMen;
+			productReference = 23543E5A26F9C76500E20D44 /* MedMenQA.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -127,6 +267,7 @@
 			projectRoot = "";
 			targets = (
 				23262DC526BA7A27006A9972 /* MedMen */,
+				23543E4626F9C76500E20D44 /* MedMenQA */,
 			);
 		};
 /* End PBXProject section */
@@ -137,12 +278,180 @@
 			buildActionMask = 2147483647;
 			files = (
 				23262DD626BA7A33006A9972 /* LaunchScreen.storyboard in Resources */,
+				23543E3026F4B59B00E20D44 /* Colors.xcassets in Resources */,
 				23262DD326BA7A33006A9972 /* Assets.xcassets in Resources */,
 				23262DD126BA7A27006A9972 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		23543E5226F9C76500E20D44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23543E5326F9C76500E20D44 /* LaunchScreen.storyboard in Resources */,
+				23543E5426F9C76500E20D44 /* Colors.xcassets in Resources */,
+				23543E5526F9C76500E20D44 /* Assets.xcassets in Resources */,
+				23543E5626F9C76500E20D44 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09A884EF4031F6F902A6AC10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedMen-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23C1927526FB7D5E00DCDD2A /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		23C1927626FB7DDF00DCDD2A /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		23C1927E26FB816400DCDD2A /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		23C1927F26FB817600DCDD2A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		3ED80722790465CFEC50CFE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MedMenQA/Pods-MedMenQA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MedMenQA/Pods-MedMenQA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MedMenQA/Pods-MedMenQA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F6B60A15433B73A3CDA695E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MedMen/Pods-MedMen-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MedMen/Pods-MedMen-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MedMen/Pods-MedMen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFA58DF397FF73CA87804907 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedMenQA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		23262DC226BA7A27006A9972 /* Sources */ = {
@@ -152,10 +461,32 @@
 				23262DCA26BA7A27006A9972 /* AppDelegate.swift in Sources */,
 				23262DE826BA82B2006A9972 /* MMConstants.swift in Sources */,
 				23262DEB26BAD461006A9972 /* FakeTabController.swift in Sources */,
-				23262DDF26BA7AE8006A9972 /* MainTabBarController.swift in Sources */,
-				23262DCC26BA7A27006A9972 /* SceneDelegate.swift in Sources */,
+				23543E3926F8CDA100E20D44 /* Environment.swift in Sources */,
+				23543E3426F4B73500E20D44 /* UIColor+MM.swift in Sources */,
+				23543E4326F8D27700E20D44 /* UserDefaults+MM.swift in Sources */,
 				23262DE326BA7B23006A9972 /* WebViewController.swift in Sources */,
+				23C1927A26FB7E6800DCDD2A /* R.generated.swift in Sources */,
+				23543E7926F9D53700E20D44 /* MedMenViewController.swift in Sources */,
 				2361B5AF26E0A6780041DD95 /* AppInfo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23543E4726F9C76500E20D44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23543E4826F9C76500E20D44 /* AppDelegate.swift in Sources */,
+				23543E4926F9C76500E20D44 /* MMConstants.swift in Sources */,
+				23543E4A26F9C76500E20D44 /* FakeTabController.swift in Sources */,
+				23543E4B26F9C76500E20D44 /* Environment.swift in Sources */,
+				23543E4D26F9C76500E20D44 /* UIColor+MM.swift in Sources */,
+				23543E4E26F9C76500E20D44 /* UserDefaults+MM.swift in Sources */,
+				23543E4F26F9C76500E20D44 /* WebViewController.swift in Sources */,
+				23543E5026F9C76500E20D44 /* AppInfo.swift in Sources */,
+				23543E7326F9D44E00E20D44 /* FakeTabController+DebugController.swift in Sources */,
+				23543E7A26F9D53700E20D44 /* MedMenViewController.swift in Sources */,
+				23543E6C26F9D42200E20D44 /* DebugController.swift in Sources */,
+				23C1927B26FB7E6800DCDD2A /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +563,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -287,7 +618,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -299,6 +630,7 @@
 		};
 		23262DDB26BA7A33006A9972 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED031232D7D5DC2334F3D1BE /* Pods-MedMen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,7 +642,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.medmen.MedMen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medmen.poc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,6 +651,7 @@
 		};
 		23262DDC26BA7A33006A9972 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5EB78B7CE596EE0ECCDC7CA /* Pods-MedMen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -330,8 +663,52 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.medmen.MedMen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medmen.poc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		23543E5826F9C76500E20D44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FC8ACAD04A51619DE0086D2 /* Pods-MedMenQA.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconQA;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				INFOPLIST_FILE = MedMen/InfoQA.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medmen.poc.qa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) MMQA";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23543E5926F9C76500E20D44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ED563477ACD905F69632B14 /* Pods-MedMenQA.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconQA;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				INFOPLIST_FILE = MedMen/InfoQA.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medmen.poc.qa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) MMQA";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +731,15 @@
 			buildConfigurations = (
 				23262DDB26BA7A33006A9972 /* Debug */,
 				23262DDC26BA7A33006A9972 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23543E5726F9C76500E20D44 /* Build configuration list for PBXNativeTarget "MedMenQA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23543E5826F9C76500E20D44 /* Debug */,
+				23543E5926F9C76500E20D44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

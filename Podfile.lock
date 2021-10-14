@@ -1,0 +1,28 @@
+PODS:
+  - R.swift (5.3.1):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - ReachabilitySwift (5.0.0)
+  - SwiftLint (0.42.0)
+
+DEPENDENCIES:
+  - R.swift
+  - ReachabilitySwift
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - R.swift
+    - R.swift.Library
+    - ReachabilitySwift
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  R.swift: 56ec7e3aef34b9eee47a659e42462db2c1cc5ac3
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
+
+PODFILE CHECKSUM: 05db8601fd80b6a3923851d33151801336405c25
+
+COCOAPODS: 1.10.2

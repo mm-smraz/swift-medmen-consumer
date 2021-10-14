@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ht5-cd-43R">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fake Tab Controller-->
+        <scene sceneID="PQf-2u-dzc">
+            <objects>
+                <viewController storyboardIdentifier="FakeTabController" id="ht5-cd-43R" customClass="FakeTabController" customModule="MedMen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Amw-yo-B8b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUz-DI-Lx0" userLabel="Header">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <subviews>
+                                    <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3T-UA-NV7">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="0.0"/>
+                                        <subviews>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MMLogo" translatesAutoresizingMaskIntoConstraints="NO" id="tfx-JW-Y3g">
+                                                <rect key="frame" x="129" y="-17.5" width="156" height="35"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="3SQ-MK-Lx0"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="tfx-JW-Y3g" firstAttribute="centerX" secondItem="X3T-UA-NV7" secondAttribute="centerX" id="WbQ-v7-U3U"/>
+                                            <constraint firstItem="tfx-JW-Y3g" firstAttribute="centerY" secondItem="X3T-UA-NV7" secondAttribute="centerY" id="azp-6t-9eA"/>
+                                            <constraint firstAttribute="height" id="i49-5C-QrP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="uqe-dh-fZS"/>
+                                <color key="backgroundColor" name="mmLightGray"/>
+                                <constraints>
+                                    <constraint firstItem="X3T-UA-NV7" firstAttribute="top" secondItem="uqe-dh-fZS" secondAttribute="top" id="1W0-Va-v5h"/>
+                                    <constraint firstAttribute="bottom" secondItem="X3T-UA-NV7" secondAttribute="bottom" id="3zU-fY-zXf"/>
+                                    <constraint firstItem="X3T-UA-NV7" firstAttribute="leading" secondItem="dUz-DI-Lx0" secondAttribute="leading" id="qX0-ab-WvQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="X3T-UA-NV7" secondAttribute="trailing" id="zdH-bb-Z61"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbH-aI-wFP" userLabel="Footer">
+                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pND-KI-qLB">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                                        <subviews>
+                                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMb-ln-PCd">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <items>
+                                                    <tabBarItem title="MedMen" image="medmenPotLeaf" id="02W-CI-7Dg"/>
+                                                    <tabBarItem tag="1" title="Stores" image="icon_storePickup" id="1hv-D3-dq3"/>
+                                                </items>
+                                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="ht5-cd-43R" id="U7U-K8-UVm"/>
+                                                </connections>
+                                            </tabBar>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="KMb-ln-PCd" firstAttribute="top" secondItem="pND-KI-qLB" secondAttribute="top" id="MAT-af-UqM"/>
+                                            <constraint firstAttribute="bottom" secondItem="KMb-ln-PCd" secondAttribute="bottom" id="TK2-4a-JsE"/>
+                                            <constraint firstAttribute="trailing" secondItem="KMb-ln-PCd" secondAttribute="trailing" id="q5i-2h-TOo"/>
+                                            <constraint firstItem="KMb-ln-PCd" firstAttribute="leading" secondItem="pND-KI-qLB" secondAttribute="leading" id="uWM-Ew-aza"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="BNI-RQ-pLg"/>
+                                <color key="backgroundColor" name="mmLightGray"/>
+                                <constraints>
+                                    <constraint firstItem="pND-KI-qLB" firstAttribute="leading" secondItem="AbH-aI-wFP" secondAttribute="leading" id="PoA-I3-bbc"/>
+                                    <constraint firstAttribute="trailing" secondItem="pND-KI-qLB" secondAttribute="trailing" id="YxI-o4-fPY"/>
+                                    <constraint firstItem="BNI-RQ-pLg" firstAttribute="bottom" secondItem="pND-KI-qLB" secondAttribute="bottom" id="fTb-b3-uMO"/>
+                                    <constraint firstItem="pND-KI-qLB" firstAttribute="top" secondItem="AbH-aI-wFP" secondAttribute="top" id="qef-zq-7VB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgt-3a-eSg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WgI-Cz-xZ7"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="AbH-aI-wFP" secondAttribute="trailing" id="1m9-MW-BxG"/>
+                            <constraint firstItem="AbH-aI-wFP" firstAttribute="top" secondItem="jgt-3a-eSg" secondAttribute="bottom" id="Inw-2k-eLV"/>
+                            <constraint firstItem="dUz-DI-Lx0" firstAttribute="top" secondItem="Amw-yo-B8b" secondAttribute="top" id="mFP-9o-Eja"/>
+                            <constraint firstItem="jgt-3a-eSg" firstAttribute="top" secondItem="dUz-DI-Lx0" secondAttribute="bottom" id="mZE-JC-Eh9"/>
+                            <constraint firstItem="jgt-3a-eSg" firstAttribute="leading" secondItem="Amw-yo-B8b" secondAttribute="leading" id="oXD-UC-urZ"/>
+                            <constraint firstAttribute="trailing" secondItem="dUz-DI-Lx0" secondAttribute="trailing" id="sDW-d7-Kja"/>
+                            <constraint firstAttribute="trailing" secondItem="jgt-3a-eSg" secondAttribute="trailing" id="v3c-I0-eKc"/>
+                            <constraint firstItem="AbH-aI-wFP" firstAttribute="leading" secondItem="Amw-yo-B8b" secondAttribute="leading" id="wbP-rR-v6h"/>
+                            <constraint firstAttribute="bottom" secondItem="AbH-aI-wFP" secondAttribute="bottom" id="yb9-zY-u40"/>
+                            <constraint firstItem="dUz-DI-Lx0" firstAttribute="leading" secondItem="Amw-yo-B8b" secondAttribute="leading" id="z1C-QP-o72"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="jgt-3a-eSg" id="MSw-Av-xfX"/>
+                        <outlet property="tabBar" destination="KMb-ln-PCd" id="luz-z1-LOH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tvp-kw-8M8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-618.84057971014499" y="693.75"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="BYZ-38-t0r" customClass="WebViewController" customModule="MedMen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="c3g-nb-M3S">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="mmPrimaryRed"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c3g-nb-M3S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ejD-2i-Rl5"/>
+                            <constraint firstItem="c3g-nb-M3S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gYz-VS-VTE"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ai" destination="c3g-nb-M3S" id="Byf-4Z-aw8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="694"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MMLogo" width="156" height="48"/>
+        <image name="icon_storePickup" width="26" height="23"/>
+        <image name="medmenPotLeaf" width="32" height="32"/>
+        <namedColor name="mmLightGray">
+            <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mmPrimaryRed">
+            <color red="0.66666666666666663" green="0.12156862745098039" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
