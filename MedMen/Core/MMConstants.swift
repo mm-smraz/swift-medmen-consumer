@@ -34,6 +34,25 @@ enum MMConstants {
         }
     }
 
+    enum Social {
+
+        static var instagramURL: URL {
+            // swiftlint:disable:next force_unwrapping
+            return URL(string: "https://www.instagram.com/ShopMedMen/")!
+        }
+
+        static var facebookURL: URL {
+            // swiftlint:disable:next force_unwrapping
+            return URL(string: "https://www.facebook.com/MedMenStores")!
+        }
+
+        static var twitterURL: URL {
+            // swiftlint:disable:next force_unwrapping
+            return URL(string: "https://twitter.com/MedMen")!
+        }
+
+    }
+
     enum Sites {
 
         enum Action {
@@ -64,6 +83,22 @@ enum MMConstants {
                 return .javaScript(js: "window.nativeApp.sidebarNavigation('cart');")
             }
         }
+    }
+
+    static var version: String {
+        guard let vNumber = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {
+            assertionFailure("App has no version")
+            return ""
+        }
+        return vNumber
+    }
+
+    static var bundle: String {
+        guard let bNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String else {
+            assertionFailure("App has no bundle version")
+            return ""
+        }
+        return bNumber
     }
 }
 

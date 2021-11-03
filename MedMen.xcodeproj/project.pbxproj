@@ -12,6 +12,10 @@
 		23262DD326BA7A33006A9972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23262DD226BA7A33006A9972 /* Assets.xcassets */; };
 		23262DE326BA7B23006A9972 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DE226BA7B23006A9972 /* WebViewController.swift */; };
 		23262DE826BA82B2006A9972 /* MMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DE726BA82B2006A9972 /* MMConstants.swift */; };
+		233AA36527216A94008EBB68 /* AppStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AA36427216A94008EBB68 /* AppStatusManager.swift */; };
+		233AA36627216A94008EBB68 /* AppStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AA36427216A94008EBB68 /* AppStatusManager.swift */; };
+		233AA3842721A240008EBB68 /* MaintenanceAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AA3832721A240008EBB68 /* MaintenanceAlertVC.swift */; };
+		233AA3852721A240008EBB68 /* MaintenanceAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AA3832721A240008EBB68 /* MaintenanceAlertVC.swift */; };
 		23543E3026F4B59B00E20D44 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23543E2F26F4B59B00E20D44 /* Colors.xcassets */; };
 		23543E3426F4B73500E20D44 /* UIColor+MM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E3326F4B73500E20D44 /* UIColor+MM.swift */; };
 		23543E3926F8CDA100E20D44 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E3826F8CDA100E20D44 /* Environment.swift */; };
@@ -29,10 +33,36 @@
 		23543E7926F9D53700E20D44 /* MedMenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E7826F9D53700E20D44 /* MedMenViewController.swift */; };
 		23543E7A26F9D53700E20D44 /* MedMenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E7826F9D53700E20D44 /* MedMenViewController.swift */; };
 		2361B5AF26E0A6780041DD95 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361B5AE26E0A6770041DD95 /* AppInfo.swift */; };
+		2387287227314932004BC807 /* AppAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2387287127314932004BC807 /* AppAnalytics.swift */; };
+		2387287327314932004BC807 /* AppAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2387287127314932004BC807 /* AppAnalytics.swift */; };
 		23C1927A26FB7E6800DCDD2A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C1927926FB7E6800DCDD2A /* R.generated.swift */; };
 		23C1927B26FB7E6800DCDD2A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C1927926FB7E6800DCDD2A /* R.generated.swift */; };
 		23C1928B26FCCB7B00DCDD2A /* MMWebAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C1928A26FCCB7B00DCDD2A /* MMWebAction.swift */; };
 		23C1928C26FCCB7B00DCDD2A /* MMWebAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C1928A26FCCB7B00DCDD2A /* MMWebAction.swift */; };
+		23C204DD2719A19B003CE2A4 /* MMRemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C204DC2719A19B003CE2A4 /* MMRemoteConfig.swift */; };
+		23C204DE2719A19B003CE2A4 /* MMRemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C204DC2719A19B003CE2A4 /* MMRemoteConfig.swift */; };
+		23C204FB2719A415003CE2A4 /* GoogleService-Info-develop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23C204F92719A415003CE2A4 /* GoogleService-Info-develop.plist */; };
+		23C204FC2719A415003CE2A4 /* GoogleService-Info-develop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23C204F92719A415003CE2A4 /* GoogleService-Info-develop.plist */; };
+		23C204FD2719A415003CE2A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23C204FA2719A415003CE2A4 /* GoogleService-Info.plist */; };
+		23C204FE2719A415003CE2A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23C204FA2719A415003CE2A4 /* GoogleService-Info.plist */; };
+		23C205022719A525003CE2A4 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C205012719A525003CE2A4 /* FirebaseService.swift */; };
+		23C205032719A525003CE2A4 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C205012719A525003CE2A4 /* FirebaseService.swift */; };
+		23C20522271D71FF003CE2A4 /* OverlayAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C20521271D71FF003CE2A4 /* OverlayAlertVC.swift */; };
+		23C20523271D71FF003CE2A4 /* OverlayAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C20521271D71FF003CE2A4 /* OverlayAlertVC.swift */; };
+		23C20529271D7223003CE2A4 /* OverlayAlert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C20528271D7223003CE2A4 /* OverlayAlert.storyboard */; };
+		23C2052A271D7223003CE2A4 /* OverlayAlert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C20528271D7223003CE2A4 /* OverlayAlert.storyboard */; };
+		23C2052F271D72C2003CE2A4 /* BGColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C2052E271D72C2003CE2A4 /* BGColorButton.swift */; };
+		23C20530271D72C2003CE2A4 /* BGColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C2052E271D72C2003CE2A4 /* BGColorButton.swift */; };
+		23C20534271D72E0003CE2A4 /* OverlayAlertVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C20533271D72E0003CE2A4 /* OverlayAlertVM.swift */; };
+		23C20535271D72E0003CE2A4 /* OverlayAlertVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C20533271D72E0003CE2A4 /* OverlayAlertVM.swift */; };
+		23C2053B271D7769003CE2A4 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C2053A271D7769003CE2A4 /* UIImage+Color.swift */; };
+		23C2053C271D7769003CE2A4 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C2053A271D7769003CE2A4 /* UIImage+Color.swift */; };
+		23C20540271D779C003CE2A4 /* MMRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C2053F271D779C003CE2A4 /* MMRoundButton.swift */; };
+		23C20541271D779C003CE2A4 /* MMRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C2053F271D779C003CE2A4 /* MMRoundButton.swift */; };
+		23C20547271D7823003CE2A4 /* UIFont+MM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C20546271D7823003CE2A4 /* UIFont+MM.swift */; };
+		23C20548271D7823003CE2A4 /* UIFont+MM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C20546271D7823003CE2A4 /* UIFont+MM.swift */; };
+		23C2054C271EA78F003CE2A4 /* AppVersionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C2054B271EA78F003CE2A4 /* AppVersionManager.swift */; };
+		23C2054D271EA78F003CE2A4 /* AppVersionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C2054B271EA78F003CE2A4 /* AppVersionManager.swift */; };
 		23CEDCEA26FCD07400329A75 /* MainTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CEDCE726FCD07400329A75 /* MainTab.storyboard */; };
 		23CEDCEB26FCD07400329A75 /* MainTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CEDCE726FCD07400329A75 /* MainTab.storyboard */; };
 		23CEDCED26FCD07400329A75 /* MainTabController+DebugController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CEDCE826FCD07400329A75 /* MainTabController+DebugController.swift */; };
@@ -54,6 +84,8 @@
 		23262DD726BA7A33006A9972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23262DE226BA7B23006A9972 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		23262DE726BA82B2006A9972 /* MMConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMConstants.swift; sourceTree = "<group>"; };
+		233AA36427216A94008EBB68 /* AppStatusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatusManager.swift; sourceTree = "<group>"; };
+		233AA3832721A240008EBB68 /* MaintenanceAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceAlertVC.swift; sourceTree = "<group>"; };
 		23543E2F26F4B59B00E20D44 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		23543E3326F4B73500E20D44 /* UIColor+MM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+MM.swift"; sourceTree = "<group>"; };
 		23543E3826F8CDA100E20D44 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
@@ -63,8 +95,21 @@
 		23543E6A26F9D42200E20D44 /* DebugController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugController.swift; sourceTree = "<group>"; };
 		23543E7826F9D53700E20D44 /* MedMenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedMenViewController.swift; sourceTree = "<group>"; };
 		2361B5AE26E0A6770041DD95 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		2387287127314932004BC807 /* AppAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAnalytics.swift; sourceTree = "<group>"; };
 		23C1927926FB7E6800DCDD2A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		23C1928A26FCCB7B00DCDD2A /* MMWebAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMWebAction.swift; sourceTree = "<group>"; };
+		23C204DC2719A19B003CE2A4 /* MMRemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMRemoteConfig.swift; sourceTree = "<group>"; };
+		23C204F92719A415003CE2A4 /* GoogleService-Info-develop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-develop.plist"; sourceTree = "<group>"; };
+		23C204FA2719A415003CE2A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		23C205012719A525003CE2A4 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		23C20521271D71FF003CE2A4 /* OverlayAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayAlertVC.swift; sourceTree = "<group>"; };
+		23C20528271D7223003CE2A4 /* OverlayAlert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OverlayAlert.storyboard; sourceTree = "<group>"; };
+		23C2052E271D72C2003CE2A4 /* BGColorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGColorButton.swift; sourceTree = "<group>"; };
+		23C20533271D72E0003CE2A4 /* OverlayAlertVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayAlertVM.swift; sourceTree = "<group>"; };
+		23C2053A271D7769003CE2A4 /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		23C2053F271D779C003CE2A4 /* MMRoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMRoundButton.swift; sourceTree = "<group>"; };
+		23C20546271D7823003CE2A4 /* UIFont+MM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+MM.swift"; sourceTree = "<group>"; };
+		23C2054B271EA78F003CE2A4 /* AppVersionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionManager.swift; sourceTree = "<group>"; };
 		23CEDCE726FCD07400329A75 /* MainTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainTab.storyboard; sourceTree = "<group>"; };
 		23CEDCE826FCD07400329A75 /* MainTabController+DebugController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainTabController+DebugController.swift"; sourceTree = "<group>"; };
 		23CEDCE926FCD07400329A75 /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
@@ -131,6 +176,8 @@
 				2361B5AE26E0A6770041DD95 /* AppInfo.swift */,
 				23543E5B26F9C76500E20D44 /* InfoQA.plist */,
 				23262DD726BA7A33006A9972 /* Info.plist */,
+				23C204F92719A415003CE2A4 /* GoogleService-Info-develop.plist */,
+				23C204FA2719A415003CE2A4 /* GoogleService-Info.plist */,
 				23543E3F26F8CE4000E20D44 /* Resources */,
 				23543E3626F8CD9500E20D44 /* Core */,
 				23543E3D26F8CDF200E20D44 /* Extensions */,
@@ -144,7 +191,13 @@
 			children = (
 				23262DE726BA82B2006A9972 /* MMConstants.swift */,
 				23543E3826F8CDA100E20D44 /* Environment.swift */,
+				23C204DC2719A19B003CE2A4 /* MMRemoteConfig.swift */,
+				23C2054B271EA78F003CE2A4 /* AppVersionManager.swift */,
+				233AA36427216A94008EBB68 /* AppStatusManager.swift */,
+				2387287127314932004BC807 /* AppAnalytics.swift */,
+				23C205012719A525003CE2A4 /* FirebaseService.swift */,
 				23543E7D26F9D53E00E20D44 /* BaseViewControllers */,
+				23C2052D271D72AF003CE2A4 /* ViewComponents */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -155,6 +208,7 @@
 				23CEDCF826FCD0B900329A75 /* LaunchScreen.storyboard */,
 				23CEDCE626FCD07400329A75 /* MainTab */,
 				23C1929626FCCD5D00DCDD2A /* WebView */,
+				23C20520271D71C7003CE2A4 /* OverlayAlert */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -163,7 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				23543E3326F4B73500E20D44 /* UIColor+MM.swift */,
+				23C20546271D7823003CE2A4 /* UIFont+MM.swift */,
 				23543E4226F8D27700E20D44 /* UserDefaults+MM.swift */,
+				23C2053A271D7769003CE2A4 /* UIImage+Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -203,6 +259,26 @@
 				23C1928A26FCCB7B00DCDD2A /* MMWebAction.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		23C20520271D71C7003CE2A4 /* OverlayAlert */ = {
+			isa = PBXGroup;
+			children = (
+				23C20533271D72E0003CE2A4 /* OverlayAlertVM.swift */,
+				23C20521271D71FF003CE2A4 /* OverlayAlertVC.swift */,
+				233AA3832721A240008EBB68 /* MaintenanceAlertVC.swift */,
+				23C20528271D7223003CE2A4 /* OverlayAlert.storyboard */,
+			);
+			path = OverlayAlert;
+			sourceTree = "<group>";
+		};
+		23C2052D271D72AF003CE2A4 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				23C2052E271D72C2003CE2A4 /* BGColorButton.swift */,
+				23C2053F271D779C003CE2A4 /* MMRoundButton.swift */,
+			);
+			path = ViewComponents;
 			sourceTree = "<group>";
 		};
 		23CEDCE626FCD07400329A75 /* MainTab */ = {
@@ -309,11 +385,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C20529271D7223003CE2A4 /* OverlayAlert.storyboard in Resources */,
 				23CEDD0026FCD1C100329A75 /* WebView.storyboard in Resources */,
 				23CEDCEA26FCD07400329A75 /* MainTab.storyboard in Resources */,
 				23CEDCF926FCD0B900329A75 /* LaunchScreen.storyboard in Resources */,
 				23543E3026F4B59B00E20D44 /* Colors.xcassets in Resources */,
+				23C204FB2719A415003CE2A4 /* GoogleService-Info-develop.plist in Resources */,
 				23262DD326BA7A33006A9972 /* Assets.xcassets in Resources */,
+				23C204FD2719A415003CE2A4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,11 +400,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C2052A271D7223003CE2A4 /* OverlayAlert.storyboard in Resources */,
 				23CEDD0126FCD1C100329A75 /* WebView.storyboard in Resources */,
 				23CEDCEB26FCD07400329A75 /* MainTab.storyboard in Resources */,
 				23CEDCFA26FCD0B900329A75 /* LaunchScreen.storyboard in Resources */,
 				23543E5426F9C76500E20D44 /* Colors.xcassets in Resources */,
+				23C204FC2719A415003CE2A4 /* GoogleService-Info-develop.plist in Resources */,
 				23543E5526F9C76500E20D44 /* Assets.xcassets in Resources */,
+				23C204FE2719A415003CE2A4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,14 +575,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				23262DCA26BA7A27006A9972 /* AppDelegate.swift in Sources */,
+				23C204DD2719A19B003CE2A4 /* MMRemoteConfig.swift in Sources */,
+				23C2054C271EA78F003CE2A4 /* AppVersionManager.swift in Sources */,
+				23C2052F271D72C2003CE2A4 /* BGColorButton.swift in Sources */,
 				23262DE826BA82B2006A9972 /* MMConstants.swift in Sources */,
+				23C20547271D7823003CE2A4 /* UIFont+MM.swift in Sources */,
 				23543E3926F8CDA100E20D44 /* Environment.swift in Sources */,
+				23C20534271D72E0003CE2A4 /* OverlayAlertVM.swift in Sources */,
+				23C205022719A525003CE2A4 /* FirebaseService.swift in Sources */,
 				23543E3426F4B73500E20D44 /* UIColor+MM.swift in Sources */,
 				23CEDCEE26FCD07400329A75 /* MainTabController.swift in Sources */,
 				23543E4326F8D27700E20D44 /* UserDefaults+MM.swift in Sources */,
+				23C2053B271D7769003CE2A4 /* UIImage+Color.swift in Sources */,
+				23C20540271D779C003CE2A4 /* MMRoundButton.swift in Sources */,
+				233AA36527216A94008EBB68 /* AppStatusManager.swift in Sources */,
+				23C20522271D71FF003CE2A4 /* OverlayAlertVC.swift in Sources */,
+				233AA3842721A240008EBB68 /* MaintenanceAlertVC.swift in Sources */,
 				23C1928B26FCCB7B00DCDD2A /* MMWebAction.swift in Sources */,
 				23262DE326BA7B23006A9972 /* WebViewController.swift in Sources */,
 				23C1927A26FB7E6800DCDD2A /* R.generated.swift in Sources */,
+				2387287227314932004BC807 /* AppAnalytics.swift in Sources */,
 				23543E7926F9D53700E20D44 /* MedMenViewController.swift in Sources */,
 				2361B5AF26E0A6780041DD95 /* AppInfo.swift in Sources */,
 			);
@@ -511,17 +605,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				23CEDCED26FCD07400329A75 /* MainTabController+DebugController.swift in Sources */,
+				23C205032719A525003CE2A4 /* FirebaseService.swift in Sources */,
+				23C20530271D72C2003CE2A4 /* BGColorButton.swift in Sources */,
+				23C20523271D71FF003CE2A4 /* OverlayAlertVC.swift in Sources */,
+				23C204DE2719A19B003CE2A4 /* MMRemoteConfig.swift in Sources */,
+				23C2053C271D7769003CE2A4 /* UIImage+Color.swift in Sources */,
 				23543E4826F9C76500E20D44 /* AppDelegate.swift in Sources */,
+				233AA36627216A94008EBB68 /* AppStatusManager.swift in Sources */,
 				23CEDCEF26FCD07400329A75 /* MainTabController.swift in Sources */,
 				23543E4926F9C76500E20D44 /* MMConstants.swift in Sources */,
 				23543E4B26F9C76500E20D44 /* Environment.swift in Sources */,
+				23C20548271D7823003CE2A4 /* UIFont+MM.swift in Sources */,
 				23543E4D26F9C76500E20D44 /* UIColor+MM.swift in Sources */,
+				23C2054D271EA78F003CE2A4 /* AppVersionManager.swift in Sources */,
 				23543E4E26F9C76500E20D44 /* UserDefaults+MM.swift in Sources */,
+				23C20541271D779C003CE2A4 /* MMRoundButton.swift in Sources */,
 				23543E4F26F9C76500E20D44 /* WebViewController.swift in Sources */,
 				23543E5026F9C76500E20D44 /* AppInfo.swift in Sources */,
 				23543E7A26F9D53700E20D44 /* MedMenViewController.swift in Sources */,
+				233AA3852721A240008EBB68 /* MaintenanceAlertVC.swift in Sources */,
 				23C1928C26FCCB7B00DCDD2A /* MMWebAction.swift in Sources */,
+				2387287327314932004BC807 /* AppAnalytics.swift in Sources */,
 				23543E6C26F9D42200E20D44 /* DebugController.swift in Sources */,
+				23C20535271D72E0003CE2A4 /* OverlayAlertVM.swift in Sources */,
 				23C1927B26FB7E6800DCDD2A /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,6 +33,7 @@ extension Environment {
     }
 
     static func setCurrent(_ env: Environment) {
+        AppAnalytics.updateEnvironment()
         UserDefaults.standard.environment = env
     }
 }

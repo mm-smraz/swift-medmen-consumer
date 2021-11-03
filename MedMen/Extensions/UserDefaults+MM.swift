@@ -21,4 +21,16 @@ extension UserDefaults {
             self.synchronize()
         }
     }
+
+    var checkedVersion: String? {
+        get {
+            let value = self.value(forKey: #function)
+            let strValue = value as? String
+            return strValue
+        }
+        set {
+            self.setValue(newValue, forKey: #function)
+            self.synchronize()
+        }
+    }
 }
