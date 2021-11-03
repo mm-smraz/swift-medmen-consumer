@@ -9,35 +9,39 @@
 /* Begin PBXBuildFile section */
 		10F262956CB0988E42427418 /* Pods_MedMen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A7D6BCB683003AB5D61C71 /* Pods_MedMen.framework */; };
 		23262DCA26BA7A27006A9972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DC926BA7A27006A9972 /* AppDelegate.swift */; };
-		23262DD126BA7A27006A9972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23262DCF26BA7A27006A9972 /* Main.storyboard */; };
 		23262DD326BA7A33006A9972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23262DD226BA7A33006A9972 /* Assets.xcassets */; };
-		23262DD626BA7A33006A9972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23262DD426BA7A33006A9972 /* LaunchScreen.storyboard */; };
 		23262DE326BA7B23006A9972 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DE226BA7B23006A9972 /* WebViewController.swift */; };
 		23262DE826BA82B2006A9972 /* MMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DE726BA82B2006A9972 /* MMConstants.swift */; };
-		23262DEB26BAD461006A9972 /* FakeTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DEA26BAD461006A9972 /* FakeTabController.swift */; };
 		23543E3026F4B59B00E20D44 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23543E2F26F4B59B00E20D44 /* Colors.xcassets */; };
 		23543E3426F4B73500E20D44 /* UIColor+MM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E3326F4B73500E20D44 /* UIColor+MM.swift */; };
 		23543E3926F8CDA100E20D44 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E3826F8CDA100E20D44 /* Environment.swift */; };
 		23543E4326F8D27700E20D44 /* UserDefaults+MM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E4226F8D27700E20D44 /* UserDefaults+MM.swift */; };
 		23543E4826F9C76500E20D44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DC926BA7A27006A9972 /* AppDelegate.swift */; };
 		23543E4926F9C76500E20D44 /* MMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DE726BA82B2006A9972 /* MMConstants.swift */; };
-		23543E4A26F9C76500E20D44 /* FakeTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DEA26BAD461006A9972 /* FakeTabController.swift */; };
 		23543E4B26F9C76500E20D44 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E3826F8CDA100E20D44 /* Environment.swift */; };
 		23543E4D26F9C76500E20D44 /* UIColor+MM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E3326F4B73500E20D44 /* UIColor+MM.swift */; };
 		23543E4E26F9C76500E20D44 /* UserDefaults+MM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E4226F8D27700E20D44 /* UserDefaults+MM.swift */; };
 		23543E4F26F9C76500E20D44 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DE226BA7B23006A9972 /* WebViewController.swift */; };
 		23543E5026F9C76500E20D44 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361B5AE26E0A6770041DD95 /* AppInfo.swift */; };
-		23543E5326F9C76500E20D44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23262DD426BA7A33006A9972 /* LaunchScreen.storyboard */; };
 		23543E5426F9C76500E20D44 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23543E2F26F4B59B00E20D44 /* Colors.xcassets */; };
 		23543E5526F9C76500E20D44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23262DD226BA7A33006A9972 /* Assets.xcassets */; };
-		23543E5626F9C76500E20D44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23262DCF26BA7A27006A9972 /* Main.storyboard */; };
 		23543E6C26F9D42200E20D44 /* DebugController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E6A26F9D42200E20D44 /* DebugController.swift */; };
-		23543E7326F9D44E00E20D44 /* FakeTabController+DebugController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E7126F9D44E00E20D44 /* FakeTabController+DebugController.swift */; };
 		23543E7926F9D53700E20D44 /* MedMenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E7826F9D53700E20D44 /* MedMenViewController.swift */; };
 		23543E7A26F9D53700E20D44 /* MedMenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543E7826F9D53700E20D44 /* MedMenViewController.swift */; };
 		2361B5AF26E0A6780041DD95 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361B5AE26E0A6770041DD95 /* AppInfo.swift */; };
 		23C1927A26FB7E6800DCDD2A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C1927926FB7E6800DCDD2A /* R.generated.swift */; };
 		23C1927B26FB7E6800DCDD2A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C1927926FB7E6800DCDD2A /* R.generated.swift */; };
+		23C1928B26FCCB7B00DCDD2A /* MMWebAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C1928A26FCCB7B00DCDD2A /* MMWebAction.swift */; };
+		23C1928C26FCCB7B00DCDD2A /* MMWebAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C1928A26FCCB7B00DCDD2A /* MMWebAction.swift */; };
+		23CEDCEA26FCD07400329A75 /* MainTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CEDCE726FCD07400329A75 /* MainTab.storyboard */; };
+		23CEDCEB26FCD07400329A75 /* MainTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CEDCE726FCD07400329A75 /* MainTab.storyboard */; };
+		23CEDCED26FCD07400329A75 /* MainTabController+DebugController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CEDCE826FCD07400329A75 /* MainTabController+DebugController.swift */; };
+		23CEDCEE26FCD07400329A75 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CEDCE926FCD07400329A75 /* MainTabController.swift */; };
+		23CEDCEF26FCD07400329A75 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CEDCE926FCD07400329A75 /* MainTabController.swift */; };
+		23CEDCF926FCD0B900329A75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CEDCF826FCD0B900329A75 /* LaunchScreen.storyboard */; };
+		23CEDCFA26FCD0B900329A75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CEDCF826FCD0B900329A75 /* LaunchScreen.storyboard */; };
+		23CEDD0026FCD1C100329A75 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CEDCFF26FCD1C100329A75 /* WebView.storyboard */; };
+		23CEDD0126FCD1C100329A75 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CEDCFF26FCD1C100329A75 /* WebView.storyboard */; };
 		9DB285408F4D617C2212F86B /* Pods_MedMenQA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B75FCC2F378919C73738C2 /* Pods_MedMenQA.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,13 +50,10 @@
 		1FC8ACAD04A51619DE0086D2 /* Pods-MedMenQA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMenQA.debug.xcconfig"; path = "Target Support Files/Pods-MedMenQA/Pods-MedMenQA.debug.xcconfig"; sourceTree = "<group>"; };
 		23262DC626BA7A27006A9972 /* MedMen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedMen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23262DC926BA7A27006A9972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23262DD026BA7A27006A9972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23262DD226BA7A33006A9972 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		23262DD526BA7A33006A9972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23262DD726BA7A33006A9972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23262DE226BA7B23006A9972 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		23262DE726BA82B2006A9972 /* MMConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMConstants.swift; sourceTree = "<group>"; };
-		23262DEA26BAD461006A9972 /* FakeTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTabController.swift; sourceTree = "<group>"; };
 		23543E2F26F4B59B00E20D44 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		23543E3326F4B73500E20D44 /* UIColor+MM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+MM.swift"; sourceTree = "<group>"; };
 		23543E3826F8CDA100E20D44 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
@@ -60,10 +61,15 @@
 		23543E5A26F9C76500E20D44 /* MedMenQA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedMenQA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23543E5B26F9C76500E20D44 /* InfoQA.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InfoQA.plist; sourceTree = "<group>"; };
 		23543E6A26F9D42200E20D44 /* DebugController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugController.swift; sourceTree = "<group>"; };
-		23543E7126F9D44E00E20D44 /* FakeTabController+DebugController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FakeTabController+DebugController.swift"; sourceTree = "<group>"; };
 		23543E7826F9D53700E20D44 /* MedMenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedMenViewController.swift; sourceTree = "<group>"; };
 		2361B5AE26E0A6770041DD95 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		23C1927926FB7E6800DCDD2A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		23C1928A26FCCB7B00DCDD2A /* MMWebAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMWebAction.swift; sourceTree = "<group>"; };
+		23CEDCE726FCD07400329A75 /* MainTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainTab.storyboard; sourceTree = "<group>"; };
+		23CEDCE826FCD07400329A75 /* MainTabController+DebugController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainTabController+DebugController.swift"; sourceTree = "<group>"; };
+		23CEDCE926FCD07400329A75 /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		23CEDCF826FCD0B900329A75 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23CEDCFF26FCD1C100329A75 /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		92B75FCC2F378919C73738C2 /* Pods_MedMenQA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedMenQA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED563477ACD905F69632B14 /* Pods-MedMenQA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMenQA.release.xcconfig"; path = "Target Support Files/Pods-MedMenQA/Pods-MedMenQA.release.xcconfig"; sourceTree = "<group>"; };
 		E5EB78B7CE596EE0ECCDC7CA /* Pods-MedMen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMen.release.xcconfig"; path = "Target Support Files/Pods-MedMen/Pods-MedMen.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,11 +152,9 @@
 		23543E3C26F8CDDD00E20D44 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				23262DD426BA7A33006A9972 /* LaunchScreen.storyboard */,
-				23262DCF26BA7A27006A9972 /* Main.storyboard */,
-				23262DEA26BAD461006A9972 /* FakeTabController.swift */,
-				23543E7126F9D44E00E20D44 /* FakeTabController+DebugController.swift */,
-				23262DE226BA7B23006A9972 /* WebViewController.swift */,
+				23CEDCF826FCD0B900329A75 /* LaunchScreen.storyboard */,
+				23CEDCE626FCD07400329A75 /* MainTab */,
+				23C1929626FCCD5D00DCDD2A /* WebView */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -181,6 +185,34 @@
 				23543E6A26F9D42200E20D44 /* DebugController.swift */,
 			);
 			path = BaseViewControllers;
+			sourceTree = "<group>";
+		};
+		23C1929626FCCD5D00DCDD2A /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				23C1929726FCCD6500DCDD2A /* Model */,
+				23262DE226BA7B23006A9972 /* WebViewController.swift */,
+				23CEDCFF26FCD1C100329A75 /* WebView.storyboard */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		23C1929726FCCD6500DCDD2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23C1928A26FCCB7B00DCDD2A /* MMWebAction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23CEDCE626FCD07400329A75 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				23CEDCE926FCD07400329A75 /* MainTabController.swift */,
+				23CEDCE726FCD07400329A75 /* MainTab.storyboard */,
+				23CEDCE826FCD07400329A75 /* MainTabController+DebugController.swift */,
+			);
+			path = MainTab;
 			sourceTree = "<group>";
 		};
 		819896348EBE06056CACFB84 /* Pods */ = {
@@ -277,10 +309,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23262DD626BA7A33006A9972 /* LaunchScreen.storyboard in Resources */,
+				23CEDD0026FCD1C100329A75 /* WebView.storyboard in Resources */,
+				23CEDCEA26FCD07400329A75 /* MainTab.storyboard in Resources */,
+				23CEDCF926FCD0B900329A75 /* LaunchScreen.storyboard in Resources */,
 				23543E3026F4B59B00E20D44 /* Colors.xcassets in Resources */,
 				23262DD326BA7A33006A9972 /* Assets.xcassets in Resources */,
-				23262DD126BA7A27006A9972 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,10 +321,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23543E5326F9C76500E20D44 /* LaunchScreen.storyboard in Resources */,
+				23CEDD0126FCD1C100329A75 /* WebView.storyboard in Resources */,
+				23CEDCEB26FCD07400329A75 /* MainTab.storyboard in Resources */,
+				23CEDCFA26FCD0B900329A75 /* LaunchScreen.storyboard in Resources */,
 				23543E5426F9C76500E20D44 /* Colors.xcassets in Resources */,
 				23543E5526F9C76500E20D44 /* Assets.xcassets in Resources */,
-				23543E5626F9C76500E20D44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,10 +494,11 @@
 			files = (
 				23262DCA26BA7A27006A9972 /* AppDelegate.swift in Sources */,
 				23262DE826BA82B2006A9972 /* MMConstants.swift in Sources */,
-				23262DEB26BAD461006A9972 /* FakeTabController.swift in Sources */,
 				23543E3926F8CDA100E20D44 /* Environment.swift in Sources */,
 				23543E3426F4B73500E20D44 /* UIColor+MM.swift in Sources */,
+				23CEDCEE26FCD07400329A75 /* MainTabController.swift in Sources */,
 				23543E4326F8D27700E20D44 /* UserDefaults+MM.swift in Sources */,
+				23C1928B26FCCB7B00DCDD2A /* MMWebAction.swift in Sources */,
 				23262DE326BA7B23006A9972 /* WebViewController.swift in Sources */,
 				23C1927A26FB7E6800DCDD2A /* R.generated.swift in Sources */,
 				23543E7926F9D53700E20D44 /* MedMenViewController.swift in Sources */,
@@ -475,41 +510,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23CEDCED26FCD07400329A75 /* MainTabController+DebugController.swift in Sources */,
 				23543E4826F9C76500E20D44 /* AppDelegate.swift in Sources */,
+				23CEDCEF26FCD07400329A75 /* MainTabController.swift in Sources */,
 				23543E4926F9C76500E20D44 /* MMConstants.swift in Sources */,
-				23543E4A26F9C76500E20D44 /* FakeTabController.swift in Sources */,
 				23543E4B26F9C76500E20D44 /* Environment.swift in Sources */,
 				23543E4D26F9C76500E20D44 /* UIColor+MM.swift in Sources */,
 				23543E4E26F9C76500E20D44 /* UserDefaults+MM.swift in Sources */,
 				23543E4F26F9C76500E20D44 /* WebViewController.swift in Sources */,
 				23543E5026F9C76500E20D44 /* AppInfo.swift in Sources */,
-				23543E7326F9D44E00E20D44 /* FakeTabController+DebugController.swift in Sources */,
 				23543E7A26F9D53700E20D44 /* MedMenViewController.swift in Sources */,
+				23C1928C26FCCB7B00DCDD2A /* MMWebAction.swift in Sources */,
 				23543E6C26F9D42200E20D44 /* DebugController.swift in Sources */,
 				23C1927B26FB7E6800DCDD2A /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		23262DCF26BA7A27006A9972 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				23262DD026BA7A27006A9972 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		23262DD426BA7A33006A9972 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				23262DD526BA7A33006A9972 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		23262DD826BA7A33006A9972 /* Debug */ = {
@@ -642,7 +659,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.medmen.poc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medmen.Medmen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -663,7 +680,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.medmen.poc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medmen.Medmen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -684,7 +701,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.medmen.poc.qa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medmen.Medmen.qa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) MMQA";
 				SWIFT_VERSION = 5.0;
@@ -706,7 +723,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.medmen.poc.qa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medmen.Medmen.qa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) MMQA";
 				SWIFT_VERSION = 5.0;

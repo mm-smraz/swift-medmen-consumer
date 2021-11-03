@@ -12,7 +12,7 @@ enum MMConstants {
     static var baseUrl: String {
         switch Environment.current {
         case .local:
-            return "http://localhost:80"
+            return "http://localhost:3000"
 
         case .develop:
             return "https://dev.medmen.com"
@@ -34,17 +34,35 @@ enum MMConstants {
         }
     }
 
-    enum Sites: String {
-        case shop = "/shop"
-        case orders = "/?userAgent=orderhistory"
-        case account = "/?userAgent=profile"
-        case bag = "/?userAgent=cart"
+    enum Sites {
 
-        var url: URL {
-            let str = MMConstants.baseUrl + self.rawValue
+        enum Action {
+            case url(url: URL)
+            case javaScript(js: String)
+        }
+
+        case shop // = "/shop"
+        case orders // = "/?userAgent=orderhistory"
+        case account // = "/?userAgent=profile"
+        case bag // = "/?userAgent=cart"
+
+        static var initialUrl: URL {
             // swiftlint:disable:next force_unwrapping
-            let url = URL(string: str)!
-            return url
+            return URL(string: MMConstants.baseUrl + "/shop")!
+        }
+
+        var action: Action {
+            switch self {
+            case .shop:
+                // swiftlint:disable:next force_unwrapping
+                return .url(url: URL(string: MMConstants.baseUrl + "/shop")!)
+            case .orders:
+                return .javaScript(js: "window.nativeApp.sidebarNavigation('orderhistory');")
+            case .account:
+                return .javaScript(js: "window.nativeApp.sidebarNavigation('profile');")
+            case .bag:
+                return .javaScript(js: "window.nativeApp.sidebarNavigation('cart');")
+            }
         }
     }
 }

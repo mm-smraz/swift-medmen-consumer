@@ -1,5 +1,5 @@
 //
-//  FakeTabController+DebugController.swift
+//  MainTabController+DebugController.swift
 //  MedMen
 //
 //  Created by Jan Zimandl on 21.09.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension FakeTabController: DebugController {
+extension MainTabController: DebugController {
 
     var debugActions: [UIAlertAction] {
         return [
@@ -16,7 +16,7 @@ extension FakeTabController: DebugController {
             },
             UIAlertAction(title: "Load Test Page", style: .default, handler: { (_) in
                 // swiftlint:disable:next force_unwrapping
-                let testUrl = URL(string: "https://test.zimandl.cz/app-communication.php")!
+                let testUrl = URL(string: "http://test.zimandl.cz/app-communication.php")!
                 self.webViewC.loadURL(testUrl)
             })
         ]
@@ -35,7 +35,7 @@ extension FakeTabController: DebugController {
             }
             sheet.addAction(UIAlertAction(title: title, style: .default, handler: { [weak self] _ in
                 Environment.setCurrent(env)
-                self?.webViewC.initURL = MMConstants.Sites.shop.url
+                self?.webViewC.initURL = MMConstants.Sites.initialUrl
                 self?.webViewC.reloadInitURL()
             }))
 
