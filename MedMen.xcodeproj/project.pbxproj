@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		10F262956CB0988E42427418 /* Pods_MedMen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A7D6BCB683003AB5D61C71 /* Pods_MedMen.framework */; };
+		23139526272AA47500CF3F48 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23139525272AA47400CF3F48 /* LoaderView.swift */; };
+		23139527272AA47500CF3F48 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23139525272AA47400CF3F48 /* LoaderView.swift */; };
+		2313952B272AA48300CF3F48 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2313952A272AA48300CF3F48 /* LoaderView.xib */; };
+		2313952C272AA48300CF3F48 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2313952A272AA48300CF3F48 /* LoaderView.xib */; };
 		23262DCA26BA7A27006A9972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DC926BA7A27006A9972 /* AppDelegate.swift */; };
 		23262DD326BA7A33006A9972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23262DD226BA7A33006A9972 /* Assets.xcassets */; };
 		23262DE326BA7B23006A9972 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23262DE226BA7B23006A9972 /* WebViewController.swift */; };
@@ -72,12 +76,18 @@
 		23CEDCFA26FCD0B900329A75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CEDCF826FCD0B900329A75 /* LaunchScreen.storyboard */; };
 		23CEDD0026FCD1C100329A75 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CEDCFF26FCD1C100329A75 /* WebView.storyboard */; };
 		23CEDD0126FCD1C100329A75 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CEDCFF26FCD1C100329A75 /* WebView.storyboard */; };
+		23DF78D9272C1D9F006B774B /* FirstLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF78D8272C1D9F006B774B /* FirstLoadingView.swift */; };
+		23DF78DA272C1D9F006B774B /* FirstLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF78D8272C1D9F006B774B /* FirstLoadingView.swift */; };
+		23DF78DE272C1DB3006B774B /* FirstLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23DF78DD272C1DB3006B774B /* FirstLoadingView.xib */; };
+		23DF78DF272C1DB3006B774B /* FirstLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23DF78DD272C1DB3006B774B /* FirstLoadingView.xib */; };
 		9DB285408F4D617C2212F86B /* Pods_MedMenQA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B75FCC2F378919C73738C2 /* Pods_MedMenQA.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04A7D6BCB683003AB5D61C71 /* Pods_MedMen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedMen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC8ACAD04A51619DE0086D2 /* Pods-MedMenQA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMenQA.debug.xcconfig"; path = "Target Support Files/Pods-MedMenQA/Pods-MedMenQA.debug.xcconfig"; sourceTree = "<group>"; };
+		23139525272AA47400CF3F48 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		2313952A272AA48300CF3F48 /* LoaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
 		23262DC626BA7A27006A9972 /* MedMen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedMen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23262DC926BA7A27006A9972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23262DD226BA7A33006A9972 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +125,8 @@
 		23CEDCE926FCD07400329A75 /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		23CEDCF826FCD0B900329A75 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23CEDCFF26FCD1C100329A75 /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
+		23DF78D8272C1D9F006B774B /* FirstLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoadingView.swift; sourceTree = "<group>"; };
+		23DF78DD272C1DB3006B774B /* FirstLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstLoadingView.xib; sourceTree = "<group>"; };
 		92B75FCC2F378919C73738C2 /* Pods_MedMenQA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedMenQA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED563477ACD905F69632B14 /* Pods-MedMenQA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMenQA.release.xcconfig"; path = "Target Support Files/Pods-MedMenQA/Pods-MedMenQA.release.xcconfig"; sourceTree = "<group>"; };
 		E5EB78B7CE596EE0ECCDC7CA /* Pods-MedMen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMen.release.xcconfig"; path = "Target Support Files/Pods-MedMen/Pods-MedMen.release.xcconfig"; sourceTree = "<group>"; };
@@ -277,6 +289,10 @@
 			children = (
 				23C2052E271D72C2003CE2A4 /* BGColorButton.swift */,
 				23C2053F271D779C003CE2A4 /* MMRoundButton.swift */,
+				23139525272AA47400CF3F48 /* LoaderView.swift */,
+				2313952A272AA48300CF3F48 /* LoaderView.xib */,
+				23DF78D8272C1D9F006B774B /* FirstLoadingView.swift */,
+				23DF78DD272C1DB3006B774B /* FirstLoadingView.xib */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -390,7 +406,9 @@
 				23CEDCEA26FCD07400329A75 /* MainTab.storyboard in Resources */,
 				23CEDCF926FCD0B900329A75 /* LaunchScreen.storyboard in Resources */,
 				23543E3026F4B59B00E20D44 /* Colors.xcassets in Resources */,
+				2313952B272AA48300CF3F48 /* LoaderView.xib in Resources */,
 				23C204FB2719A415003CE2A4 /* GoogleService-Info-develop.plist in Resources */,
+				23DF78DE272C1DB3006B774B /* FirstLoadingView.xib in Resources */,
 				23262DD326BA7A33006A9972 /* Assets.xcassets in Resources */,
 				23C204FD2719A415003CE2A4 /* GoogleService-Info.plist in Resources */,
 			);
@@ -405,7 +423,9 @@
 				23CEDCEB26FCD07400329A75 /* MainTab.storyboard in Resources */,
 				23CEDCFA26FCD0B900329A75 /* LaunchScreen.storyboard in Resources */,
 				23543E5426F9C76500E20D44 /* Colors.xcassets in Resources */,
+				2313952C272AA48300CF3F48 /* LoaderView.xib in Resources */,
 				23C204FC2719A415003CE2A4 /* GoogleService-Info-develop.plist in Resources */,
+				23DF78DF272C1DB3006B774B /* FirstLoadingView.xib in Resources */,
 				23543E5526F9C76500E20D44 /* Assets.xcassets in Resources */,
 				23C204FE2719A415003CE2A4 /* GoogleService-Info.plist in Resources */,
 			);
@@ -578,7 +598,9 @@
 				23C204DD2719A19B003CE2A4 /* MMRemoteConfig.swift in Sources */,
 				23C2054C271EA78F003CE2A4 /* AppVersionManager.swift in Sources */,
 				23C2052F271D72C2003CE2A4 /* BGColorButton.swift in Sources */,
+				23DF78D9272C1D9F006B774B /* FirstLoadingView.swift in Sources */,
 				23262DE826BA82B2006A9972 /* MMConstants.swift in Sources */,
+				23139526272AA47500CF3F48 /* LoaderView.swift in Sources */,
 				23C20547271D7823003CE2A4 /* UIFont+MM.swift in Sources */,
 				23543E3926F8CDA100E20D44 /* Environment.swift in Sources */,
 				23C20534271D72E0003CE2A4 /* OverlayAlertVM.swift in Sources */,
@@ -607,6 +629,7 @@
 				23CEDCED26FCD07400329A75 /* MainTabController+DebugController.swift in Sources */,
 				23C205032719A525003CE2A4 /* FirebaseService.swift in Sources */,
 				23C20530271D72C2003CE2A4 /* BGColorButton.swift in Sources */,
+				23139527272AA47500CF3F48 /* LoaderView.swift in Sources */,
 				23C20523271D71FF003CE2A4 /* OverlayAlertVC.swift in Sources */,
 				23C204DE2719A19B003CE2A4 /* MMRemoteConfig.swift in Sources */,
 				23C2053C271D7769003CE2A4 /* UIImage+Color.swift in Sources */,
@@ -621,6 +644,7 @@
 				23543E4E26F9C76500E20D44 /* UserDefaults+MM.swift in Sources */,
 				23C20541271D779C003CE2A4 /* MMRoundButton.swift in Sources */,
 				23543E4F26F9C76500E20D44 /* WebViewController.swift in Sources */,
+				23DF78DA272C1D9F006B774B /* FirstLoadingView.swift in Sources */,
 				23543E5026F9C76500E20D44 /* AppInfo.swift in Sources */,
 				23543E7A26F9D53700E20D44 /* MedMenViewController.swift in Sources */,
 				233AA3852721A240008EBB68 /* MaintenanceAlertVC.swift in Sources */,

@@ -16,6 +16,10 @@ class MainTabController: MedMenViewController {
 
     internal var webViewC: WebViewController!
 
+    private var loadingScreen: FirstLoadingView?
+    private var loadingScreenAppearance: Date?
+    private var loadingScreenHideTimer: Timer?
+
     static func instantiateFromStoryboard() -> MainTabController {
         // swiftlint:disable:next force_unwrapping
         let vc = R.storyboard.mainTab.instantiateInitialViewController()!
@@ -37,7 +41,7 @@ class MainTabController: MedMenViewController {
         tabBar.unselectedItemTintColor = UIColor.MM.darkerGray
         
         prepareTabBarItems()
-
+        showFirstLoader()
     }
 
     private func prepareTabBarItems() {
@@ -50,6 +54,33 @@ class MainTabController: MedMenViewController {
             return item
         }
         tabBar.items = tabItems
+    }
+
+    private func showFirstLoader() {
+        loadingScreen = FirstLoadingView()
+        loadingScreen?.show(over: self, animated: false)
+        loadingScreenAppearance = Date()
+    }
+
+    private func hideFirstLoaderAfterDelay() {
+        guard let ls = loadingScreen, loadingScreenHideTimer == nil else {
+            return
+        }
+
+        var delay: TimeInterval = 0
+        if let date = loadingScreenAppearance {
+            let timeIntervalSinceAppearance = Date().timeIntervalSince(date)
+            let hideDelay = ls.minAppearanceInterval - timeIntervalSinceAppearance
+            if hideDelay > 0 {
+                delay = hideDelay
+            }
+        }
+
+        loadingScreenHideTimer = Timer.scheduledTimer(withTimeInterval: delay, repeats: false, block: { [weak self] (_) in
+            ls.hide()
+            self?.loadingScreen = nil
+            self?.loadingScreenHideTimer = nil
+        })
     }
 
 }
@@ -91,4 +122,9 @@ extension MainTabController: WebViewControllerDelegate {
         }
     }
 
+    func webViewControllerLoadingStateChanged(webViewController: WebViewController, isLoading: Bool) {
+        if !isLoading {
+            hideFirstLoaderAfterDelay()
+        }
+    }
 }

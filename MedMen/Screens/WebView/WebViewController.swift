@@ -10,6 +10,7 @@ import WebKit
 
 protocol WebViewControllerDelegate: class {
     func webViewControllerHandleAction(webViewController: WebViewController, action: MMWebAction)
+    func webViewControllerLoadingStateChanged(webViewController: WebViewController, isLoading: Bool)
 }
 
 class WebViewController: MedMenViewController {
@@ -17,6 +18,12 @@ class WebViewController: MedMenViewController {
     var initURL: URL?
     var timeoutInterval: TimeInterval = 30
     weak var delegate: WebViewControllerDelegate?
+
+    private(set) var isLoading: Bool = false {
+        didSet {
+            delegate?.webViewControllerLoadingStateChanged(webViewController: self, isLoading: self.isLoading)
+        }
+    }
 
     @IBOutlet private weak var progressV: UIView!
     @IBOutlet private weak var progressWidth: NSLayoutConstraint!
@@ -152,6 +159,7 @@ class WebViewController: MedMenViewController {
         var req = request
         req.addValue(AppInfo.versionNumber, forHTTPHeaderField: "MedMen-Version")
         webView.load(req)
+        self.isLoading = true
     }
 
 }
@@ -296,16 +304,17 @@ extension WebViewController: WKNavigationDelegate {
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-
+        self.isLoading = false
     }
 
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-
+        self.isLoading = false
     }
 
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         // TODO: handle error
         print("WebView error: \(error)")
+        self.isLoading = false
     }
 }
 
