@@ -144,4 +144,15 @@ extension MMConstants.Sites {
         }
         // swiftlint:enable force_unwrapping
     }
+
+    var highlightedIcon: UIImage {
+        // swiftlint:disable force_unwrapping
+        switch self {
+        case .shop: return R.image.icon_tabStore_h()!
+        case .orders: return R.image.icon_tabTicket_h()!
+        case .account: return R.image.icon_tabAccount_h()!
+        case .bag: return R.image.icon_tabBag_h()!
+        }
+        // swiftlint:enable force_unwrapping
+    }
 }

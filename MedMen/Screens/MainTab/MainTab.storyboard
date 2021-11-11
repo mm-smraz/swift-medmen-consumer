@@ -17,7 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUz-DI-Lx0" userLabel="Header">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgt-3a-eSg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUz-DI-Lx0">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <subviews>
                                     <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3T-UA-NV7">
@@ -48,7 +52,7 @@
                                     <constraint firstAttribute="trailing" secondItem="X3T-UA-NV7" secondAttribute="trailing" id="zdH-bb-Z61"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbH-aI-wFP" userLabel="Footer">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbH-aI-wFP">
                                 <rect key="frame" x="0.0" y="813" width="414" height="83"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pND-KI-qLB">
@@ -58,8 +62,8 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <items>
-                                                    <tabBarItem title="MedMen" image="medmenPotLeaf" id="02W-CI-7Dg"/>
-                                                    <tabBarItem tag="1" title="Stores" image="icon_storePickup" id="1hv-D3-dq3"/>
+                                                    <tabBarItem title="Shop" image="icon_tab-store" selectedImage="icon_tab-store_h" id="02W-CI-7Dg"/>
+                                                    <tabBarItem tag="1" title="Orders" image="icon_tab-ticket" selectedImage="icon_tab-ticket_h" id="1hv-D3-dq3"/>
                                                 </items>
                                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
@@ -77,17 +81,13 @@
                                     </view>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="BNI-RQ-pLg"/>
-                                <color key="backgroundColor" name="mmLightGray"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="pND-KI-qLB" firstAttribute="leading" secondItem="AbH-aI-wFP" secondAttribute="leading" id="PoA-I3-bbc"/>
                                     <constraint firstAttribute="trailing" secondItem="pND-KI-qLB" secondAttribute="trailing" id="YxI-o4-fPY"/>
                                     <constraint firstItem="BNI-RQ-pLg" firstAttribute="bottom" secondItem="pND-KI-qLB" secondAttribute="bottom" id="fTb-b3-uMO"/>
                                     <constraint firstItem="pND-KI-qLB" firstAttribute="top" secondItem="AbH-aI-wFP" secondAttribute="top" id="qef-zq-7VB"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgt-3a-eSg">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WgI-Cz-xZ7"/>
@@ -107,6 +107,8 @@
                     </view>
                     <connections>
                         <outlet property="containerView" destination="jgt-3a-eSg" id="MSw-Av-xfX"/>
+                        <outlet property="footerV" destination="AbH-aI-wFP" id="Oul-KW-r6F"/>
+                        <outlet property="headerV" destination="dUz-DI-Lx0" id="sDK-Rc-4FM"/>
                         <outlet property="tabBar" destination="KMb-ln-PCd" id="luz-z1-LOH"/>
                     </connections>
                 </viewController>
@@ -117,8 +119,10 @@
     </scenes>
     <resources>
         <image name="MMLogo" width="156" height="48"/>
-        <image name="icon_storePickup" width="26" height="23"/>
-        <image name="medmenPotLeaf" width="32" height="32"/>
+        <image name="icon_tab-store" width="26" height="22"/>
+        <image name="icon_tab-store_h" width="26" height="22"/>
+        <image name="icon_tab-ticket" width="20" height="22"/>
+        <image name="icon_tab-ticket_h" width="20" height="22"/>
         <namedColor name="mmLightGray">
             <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

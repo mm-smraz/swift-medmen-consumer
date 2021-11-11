@@ -37,6 +37,7 @@ extension MainTabController: DebugController {
                 Environment.setCurrent(env)
                 self?.webViewC.initURL = MMConstants.Sites.initialUrl
                 self?.webViewC.reloadInitURL()
+                self?.selectTab(.shop)
             }))
 
         }

@@ -9,8 +9,13 @@ import UIKit
 
 class MainTabController: MedMenViewController {
 
+    var deselectTabAfterDelay: Bool = false
+    let tabSites: [MMConstants.Sites] = [.shop, .orders, .account, .bag]
+
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var tabBar: UITabBar!
+    @IBOutlet private weak var headerV: UIView!
+    @IBOutlet private weak var footerV: UIView!
 
     private var bagItem: UITabBarItem?
 
@@ -30,24 +35,63 @@ class MainTabController: MedMenViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupUI()
+        
+        prepareTabBarItems()
+        showFirstLoader()
 
+        selectTab(.shop)
+    }
+
+    @discardableResult
+    func selectTab(_ site: MMConstants.Sites) -> Bool {
+        guard let index = tabSites.firstIndex(of: site) else {
+            return false
+        }
+        return selectTab(index: index)
+    }
+
+    @discardableResult
+    func selectTab(index: Int) -> Bool {
+        let itemsCount = tabBar.items?.count ?? 0
+        guard index < itemsCount && index >= 0 else {
+            return false
+        }
+        let item = tabBar.items?[index]
+        tabBar.selectedItem = item
+
+        if deselectTabAfterDelay {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                self?.tabBar.selectedItem = nil
+            }
+        }
+
+        return true
+    }
+
+    private func setupUI() {
         webViewC = WebViewController.instantiateFromStoryboard(initURL: MMConstants.Sites.initialUrl, delegate: self)
         webViewC.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         webViewC.view.frame = containerView.bounds
         containerView.addSubview(webViewC.view)
 
         tabBar.backgroundImage = UIImage()
-        tabBar.tintColor = UIColor.MM.primaryRed
+        tabBar.tintColor = UIColor.MM.primaryBlack
         tabBar.unselectedItemTintColor = UIColor.MM.darkerGray
-        
-        prepareTabBarItems()
-        showFirstLoader()
+        tabBar.backgroundColor = .white
+        tabBar.layer.shadowColor = UIColor.MM.mediumLightGray.cgColor
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: -0.5)
+        tabBar.layer.shadowOpacity = 1
+        tabBar.layer.shadowRadius = 0
+
+        footerV.backgroundColor = tabBar.backgroundColor
     }
 
     private func prepareTabBarItems() {
-        let tabSites: [MMConstants.Sites] = [.shop, .orders, .account, .bag]
         let tabItems: [UITabBarItem] = tabSites.map {
             let item = UITabBarItem(title: $0.title, image: $0.icon, tag: $0.tag)
+            item.selectedImage = $0.highlightedIcon
+            item.badgeColor = UIColor.MM.primaryRed
             if $0 == .bag {
                 self.bagItem = item
             }
@@ -101,8 +145,10 @@ extension MainTabController: UITabBarDelegate {
             webViewC.runJavascript(js)
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            tabBar.selectedItem = nil
+        if deselectTabAfterDelay {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                tabBar.selectedItem = nil
+            }
         }
     }
 }
