@@ -84,6 +84,14 @@
 		23DF78DA272C1D9F006B774B /* FirstLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF78D8272C1D9F006B774B /* FirstLoadingView.swift */; };
 		23DF78DE272C1DB3006B774B /* FirstLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23DF78DD272C1DB3006B774B /* FirstLoadingView.xib */; };
 		23DF78DF272C1DB3006B774B /* FirstLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23DF78DD272C1DB3006B774B /* FirstLoadingView.xib */; };
+		23E4A840273A6F0200471E08 /* SignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A83F273A6F0200471E08 /* SignInManager.swift */; };
+		23E4A841273A6F0200471E08 /* SignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A83F273A6F0200471E08 /* SignInManager.swift */; };
+		23E4A849273C21AE00471E08 /* MMWebFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A848273C21AE00471E08 /* MMWebFunction.swift */; };
+		23E4A84A273C21AE00471E08 /* MMWebFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A848273C21AE00471E08 /* MMWebFunction.swift */; };
+		23E4A850273C254900471E08 /* MMWebSites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A84F273C254900471E08 /* MMWebSites.swift */; };
+		23E4A851273C254900471E08 /* MMWebSites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A84F273C254900471E08 /* MMWebSites.swift */; };
+		23E4A89A273D7ABC00471E08 /* DisplayableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A899273D7ABC00471E08 /* DisplayableError.swift */; };
+		23E4A89B273D7ABC00471E08 /* DisplayableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A899273D7ABC00471E08 /* DisplayableError.swift */; };
 		9DB285408F4D617C2212F86B /* Pods_MedMenQA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B75FCC2F378919C73738C2 /* Pods_MedMenQA.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +141,10 @@
 		23CEDCFF26FCD1C100329A75 /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		23DF78D8272C1D9F006B774B /* FirstLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoadingView.swift; sourceTree = "<group>"; };
 		23DF78DD272C1DB3006B774B /* FirstLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstLoadingView.xib; sourceTree = "<group>"; };
+		23E4A83F273A6F0200471E08 /* SignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInManager.swift; sourceTree = "<group>"; };
+		23E4A848273C21AE00471E08 /* MMWebFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMWebFunction.swift; sourceTree = "<group>"; };
+		23E4A84F273C254900471E08 /* MMWebSites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMWebSites.swift; sourceTree = "<group>"; };
+		23E4A899273D7ABC00471E08 /* DisplayableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayableError.swift; sourceTree = "<group>"; };
 		92B75FCC2F378919C73738C2 /* Pods_MedMenQA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedMenQA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED563477ACD905F69632B14 /* Pods-MedMenQA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMenQA.release.xcconfig"; path = "Target Support Files/Pods-MedMenQA/Pods-MedMenQA.release.xcconfig"; sourceTree = "<group>"; };
 		E5EB78B7CE596EE0ECCDC7CA /* Pods-MedMen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMen.release.xcconfig"; path = "Target Support Files/Pods-MedMen/Pods-MedMen.release.xcconfig"; sourceTree = "<group>"; };
@@ -208,12 +220,14 @@
 			isa = PBXGroup;
 			children = (
 				23262DE726BA82B2006A9972 /* MMConstants.swift */,
+				23E4A899273D7ABC00471E08 /* DisplayableError.swift */,
 				23543E3826F8CDA100E20D44 /* Environment.swift */,
 				23C204DC2719A19B003CE2A4 /* MMRemoteConfig.swift */,
 				23C2054B271EA78F003CE2A4 /* AppVersionManager.swift */,
 				233AA36427216A94008EBB68 /* AppStatusManager.swift */,
 				2387287127314932004BC807 /* AppAnalytics.swift */,
 				23C205012719A525003CE2A4 /* FirebaseService.swift */,
+				23E4A83F273A6F0200471E08 /* SignInManager.swift */,
 				23543E7D26F9D53E00E20D44 /* BaseViewControllers */,
 				23C2052D271D72AF003CE2A4 /* ViewComponents */,
 			);
@@ -275,6 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				23C1928A26FCCB7B00DCDD2A /* MMWebAction.swift */,
+				23E4A848273C21AE00471E08 /* MMWebFunction.swift */,
+				23E4A84F273C254900471E08 /* MMWebSites.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -612,7 +628,10 @@
 				238728CF273546F1004BC807 /* MMPopupView.swift in Sources */,
 				23262DE826BA82B2006A9972 /* MMConstants.swift in Sources */,
 				23139526272AA47500CF3F48 /* LoaderView.swift in Sources */,
+				23E4A850273C254900471E08 /* MMWebSites.swift in Sources */,
+				23E4A840273A6F0200471E08 /* SignInManager.swift in Sources */,
 				23C20547271D7823003CE2A4 /* UIFont+MM.swift in Sources */,
+				23E4A89A273D7ABC00471E08 /* DisplayableError.swift in Sources */,
 				23543E3926F8CDA100E20D44 /* Environment.swift in Sources */,
 				23C20534271D72E0003CE2A4 /* MMAlertVM.swift in Sources */,
 				23C205022719A525003CE2A4 /* FirebaseService.swift in Sources */,
@@ -627,6 +646,7 @@
 				23C1928B26FCCB7B00DCDD2A /* MMWebAction.swift in Sources */,
 				23262DE326BA7B23006A9972 /* WebViewController.swift in Sources */,
 				23C1927A26FB7E6800DCDD2A /* R.generated.swift in Sources */,
+				23E4A849273C21AE00471E08 /* MMWebFunction.swift in Sources */,
 				2387287227314932004BC807 /* AppAnalytics.swift in Sources */,
 				23543E7926F9D53700E20D44 /* MedMenViewController.swift in Sources */,
 				2361B5AF26E0A6780041DD95 /* AppInfo.swift in Sources */,
@@ -649,21 +669,25 @@
 				233AA36627216A94008EBB68 /* AppStatusManager.swift in Sources */,
 				23CEDCEF26FCD07400329A75 /* MainTabController.swift in Sources */,
 				23543E4926F9C76500E20D44 /* MMConstants.swift in Sources */,
+				23E4A89B273D7ABC00471E08 /* DisplayableError.swift in Sources */,
 				23543E4B26F9C76500E20D44 /* Environment.swift in Sources */,
 				23C20548271D7823003CE2A4 /* UIFont+MM.swift in Sources */,
 				23543E4D26F9C76500E20D44 /* UIColor+MM.swift in Sources */,
 				23C2054D271EA78F003CE2A4 /* AppVersionManager.swift in Sources */,
 				23543E4E26F9C76500E20D44 /* UserDefaults+MM.swift in Sources */,
 				23C20541271D779C003CE2A4 /* MMRoundButton.swift in Sources */,
+				23E4A841273A6F0200471E08 /* SignInManager.swift in Sources */,
 				23543E4F26F9C76500E20D44 /* WebViewController.swift in Sources */,
 				23DF78DA272C1D9F006B774B /* FirstLoadingView.swift in Sources */,
 				23543E5026F9C76500E20D44 /* AppInfo.swift in Sources */,
+				23E4A851273C254900471E08 /* MMWebSites.swift in Sources */,
 				23543E7A26F9D53700E20D44 /* MedMenViewController.swift in Sources */,
 				233AA3852721A240008EBB68 /* MaintenanceAlertVC.swift in Sources */,
 				23C1928C26FCCB7B00DCDD2A /* MMWebAction.swift in Sources */,
 				2387287327314932004BC807 /* AppAnalytics.swift in Sources */,
 				23543E6C26F9D42200E20D44 /* DebugController.swift in Sources */,
 				23C20535271D72E0003CE2A4 /* MMAlertVM.swift in Sources */,
+				23E4A84A273C21AE00471E08 /* MMWebFunction.swift in Sources */,
 				23C1927B26FB7E6800DCDD2A /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

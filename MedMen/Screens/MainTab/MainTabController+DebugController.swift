@@ -35,7 +35,7 @@ extension MainTabController: DebugController {
             }
             sheet.addAction(UIAlertAction(title: title, style: .default, handler: { [weak self] _ in
                 Environment.setCurrent(env)
-                self?.webViewC.initURL = MMConstants.Sites.initialUrl
+                self?.webViewC.initURL = MMWebSites.initialUrl
                 self?.webViewC.reloadInitURL()
                 self?.selectTab(.shop)
             }))

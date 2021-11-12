@@ -212,6 +212,11 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
   - BoringSSL-GRPC (0.0.7):
     - BoringSSL-GRPC/Implementation (= 0.0.7)
     - BoringSSL-GRPC/Interface (= 0.0.7)
@@ -349,6 +354,7 @@ PODS:
   - SwiftLint (0.42.0)
 
 DEPENDENCIES:
+  - AppAuth
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Crashlytics
@@ -361,6 +367,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - abseil
+    - AppAuth
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
@@ -396,6 +403,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   Firebase: e1e089d9aac215a52442583f818ab61de3c4581b
   FirebaseAnalytics: 9f8f4feab1f3fddf4e4515f8f022fe6aa9e51043
@@ -420,6 +428,6 @@ SPEC CHECKSUMS:
   Sentry: e9d74832ee2f49de8e0d358b89241047c706423e
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: e1cbe39c87b2ab60acedb623eb2a0bafeb2347d4
+PODFILE CHECKSUM: b8b77596839927f0b11c88aee8e401c4cec8293e
 
 COCOAPODS: 1.10.2

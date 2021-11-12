@@ -10,7 +10,7 @@ import UIKit
 class MainTabController: MedMenViewController {
 
     var deselectTabAfterDelay: Bool = false
-    let tabSites: [MMConstants.Sites] = [.shop, .orders, .account, .bag]
+    let tabSites: [MMWebSites] = [.shop, .orders, .account, .bag]
 
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var tabBar: UITabBar!
@@ -44,7 +44,7 @@ class MainTabController: MedMenViewController {
     }
 
     @discardableResult
-    func selectTab(_ site: MMConstants.Sites) -> Bool {
+    func selectTab(_ site: MMWebSites) -> Bool {
         guard let index = tabSites.firstIndex(of: site) else {
             return false
         }
@@ -70,7 +70,7 @@ class MainTabController: MedMenViewController {
     }
 
     private func setupUI() {
-        webViewC = WebViewController.instantiateFromStoryboard(initURL: MMConstants.Sites.initialUrl, delegate: self)
+        webViewC = WebViewController.instantiateFromStoryboard(initURL: MMWebSites.initialUrl, delegate: self)
         webViewC.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         webViewC.view.frame = containerView.bounds
         containerView.addSubview(webViewC.view)
@@ -134,7 +134,7 @@ class MainTabController: MedMenViewController {
 extension MainTabController: UITabBarDelegate {
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
 
-        guard let site = MMConstants.Sites(tag: item.tag) else {
+        guard let site = MMWebSites(tag: item.tag) else {
             return
         }
 
@@ -143,6 +143,8 @@ extension MainTabController: UITabBarDelegate {
             webViewC.loadURL(url)
         case .javaScript(let js):
             webViewC.runJavascript(js)
+        case .webFunction(let wf):
+            webViewC.runWebFunction(wf)
         }
 
         if deselectTabAfterDelay {

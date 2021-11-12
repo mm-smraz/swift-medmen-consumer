@@ -14,6 +14,7 @@ def shared_pods
   pod 'ReachabilitySwift'
   pod 'R.swift'
   pod 'Sentry', :git => 'https://github.com/getsentry/sentry-cocoa.git', :tag => '7.5.0'
+  pod 'AppAuth'
 end
 
 target 'MedMen' do

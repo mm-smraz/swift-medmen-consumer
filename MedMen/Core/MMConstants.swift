@@ -34,6 +34,33 @@ enum MMConstants {
         }
     }
 
+    static var appUrlScheme: String {
+        #if MMQA
+        return "medmenqa"
+        #else
+        return "medmen"
+        #endif
+    }
+
+    enum GoogleSignIn {
+        
+        static var clientId: String {
+            #if MMQA
+            return "189534780367-ov0vshilrr7a3dq9502o0itjbp9t86gt.apps.googleusercontent.com"
+            #else
+            return "189534780367-6fh9qfhscmg0ec9sq828gfiqovade8pj.apps.googleusercontent.com"
+            #endif
+        }
+
+        static var redirectUrlScheme: String {
+            #if MMQA
+            return "com.googleusercontent.apps.189534780367-ov0vshilrr7a3dq9502o0itjbp9t86gt"
+            #else
+            return "com.googleusercontent.apps.189534780367-6fh9qfhscmg0ec9sq828gfiqovade8pj"
+            #endif
+        }
+    }
+
     enum Social {
 
         static var instagramURL: URL {
@@ -53,38 +80,6 @@ enum MMConstants {
 
     }
 
-    enum Sites {
-
-        enum Action {
-            case url(url: URL)
-            case javaScript(js: String)
-        }
-
-        case shop // = "/shop"
-        case orders // = "/?userAgent=orderhistory"
-        case account // = "/?userAgent=profile"
-        case bag // = "/?userAgent=cart"
-
-        static var initialUrl: URL {
-            // swiftlint:disable:next force_unwrapping
-            return URL(string: MMConstants.baseUrl + "/shop")!
-        }
-
-        var action: Action {
-            switch self {
-            case .shop:
-                // swiftlint:disable:next force_unwrapping
-                return .url(url: URL(string: MMConstants.baseUrl + "/shop")!)
-            case .orders:
-                return .javaScript(js: "window.nativeApp.sidebarNavigation('orderhistory');")
-            case .account:
-                return .javaScript(js: "window.nativeApp.sidebarNavigation('profile');")
-            case .bag:
-                return .javaScript(js: "window.nativeApp.sidebarNavigation('cart');")
-            }
-        }
-    }
-
     static var version: String {
         guard let vNumber = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {
             assertionFailure("App has no version")
@@ -99,60 +94,5 @@ enum MMConstants {
             return ""
         }
         return bNumber
-    }
-}
-
-// MARK: - MMConstants.Sites UI Extension
-
-extension MMConstants.Sites {
-
-    init?(tag: Int) {
-        switch tag {
-        case Self.shop.tag: self = .shop
-        case Self.orders.tag: self = .orders
-        case Self.account.tag: self = .account
-        case Self.bag.tag: self = .bag
-        default: return nil
-        }
-    }
-
-    var tag: Int {
-        switch self {
-        case .shop: return 1
-        case .orders: return 2
-        case .account: return 3
-        case .bag: return 4
-        }
-    }
-
-    var title: String {
-        switch self {
-        case .shop: return "Shop"
-        case .orders: return "Orders"
-        case .account: return "Account"
-        case .bag: return "Bag"
-        }
-    }
-
-    var icon: UIImage {
-        // swiftlint:disable force_unwrapping
-        switch self {
-        case .shop: return R.image.icon_tabStore()!
-        case .orders: return R.image.icon_tabTicket()!
-        case .account: return R.image.icon_tabAccount()!
-        case .bag: return R.image.icon_tabBag()!
-        }
-        // swiftlint:enable force_unwrapping
-    }
-
-    var highlightedIcon: UIImage {
-        // swiftlint:disable force_unwrapping
-        switch self {
-        case .shop: return R.image.icon_tabStore_h()!
-        case .orders: return R.image.icon_tabTicket_h()!
-        case .account: return R.image.icon_tabAccount_h()!
-        case .bag: return R.image.icon_tabBag_h()!
-        }
-        // swiftlint:enable force_unwrapping
     }
 }

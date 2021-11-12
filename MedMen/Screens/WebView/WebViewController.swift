@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import AppAuth
 
 protocol WebViewControllerDelegate: class {
     func webViewControllerHandleAction(webViewController: WebViewController, action: MMWebAction)
@@ -33,6 +34,8 @@ class WebViewController: MedMenViewController {
             webView.navigationDelegate = self
         }
     }
+
+    private var signInMng = SignInManager()
 
     private var progresKVOToken: NSKeyValueObservation?
     private var titleKVOToken: NSKeyValueObservation?
@@ -150,6 +153,10 @@ class WebViewController: MedMenViewController {
         }
     }
 
+    func runWebFunction(_ webFunction: MMWebFunction) {
+        runJavascript(webFunction.jsCode)
+    }
+
     func loadURL(_ url: URL) {
         let req = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: timeoutInterval)
         self.loadRequest(req)
@@ -228,7 +235,23 @@ extension WebViewController: WKUIDelegate {
            frame.isMainFrame {
             return nil
         }
-        webView.load(navigationAction.request)
+
+        let vc = delegate as? UIViewController ?? self
+        if let config = SignInConfiguration.config(from: navigationAction.request.url) {
+            signInMng.signIn(config: config, in: vc) { [weak self] (result) in
+                switch result {
+                case .success(let tokenId):
+                    self?.runWebFunction(.googleHandler(tokenId: tokenId))
+
+                case .failure(let error):
+                    print("SIGN IN ERROR: \(error)")
+                    MMPopupView.showError(error, in: vc)
+                }
+            }
+        } else {
+            webView.load(navigationAction.request)
+        }
+
         return nil
     }
 
@@ -309,14 +332,6 @@ extension WebViewController: WKNavigationDelegate {
 
             decisionHandler(.cancel)
             return
-        }
-
-        if let headerFields = response.allHeaderFields as? [String: String] {
-            let cookies = HTTPCookie.cookies(withResponseHeaderFields: headerFields, for: url)
-            print("COOKIES: \(cookies)")
-            cookies.forEach { cookie in
-                //webView.configuration.websiteDataStore.httpCookieStore.setCookie(cookie)
-            }
         }
 
         decisionHandler(.allow)
