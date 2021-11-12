@@ -27,8 +27,8 @@ class AppStatusManager {
 
         if MMRemoteConfig.shared.appIsKilled {
 
-            let vm = OverlayAlertVM(icon: .geoLeaf, title: "We’ll Be Back Soon", message: "Sorry, we’re down for maintenance. In the meantime, place an order online through medmen.com.", actions: [
-                OverlayAlertAction(title: "Go to MedMen.com", style: .primary, handler: { [weak self] in
+            let vm = MMAlertVM(icon: .geoLeaf, title: "We’ll Be Back Soon", message: "Sorry, we’re down for maintenance. In the meantime, place an order online through medmen.com.", actions: [
+                MMAlertAction(title: "Go to MedMen.com", style: .primary, handler: { [weak self] in
                     self?.openMedMenCom()
                 })
             ])

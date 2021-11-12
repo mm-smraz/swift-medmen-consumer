@@ -287,20 +287,39 @@ extension WebViewController: WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         guard let response = navigationResponse.response as? HTTPURLResponse,
-            let url = navigationResponse.response.url else {
+              let url = navigationResponse.response.url else {
             decisionHandler(.cancel)
             return
-          }
+        }
 
-          if let headerFields = response.allHeaderFields as? [String: String] {
+        if response.statusCode >= 500 {
+
+            let vc = delegate as? UIViewController ?? self
+            let vm = MMAlertVM(
+                icon: .geoLeafSleep,
+                title: "Oops!",
+                message: "We’re experiencing a temporary outage, and are working hard to get back up and running soon.",
+                actions: [
+                    MMAlertAction(title: "Retry App", style: .primary, handler: { [weak self] in
+                        self?.loadURL(url)
+                    })
+                ]
+            )
+            OverlayAlertVC.show(in: vc, viewModel: vm)
+
+            decisionHandler(.cancel)
+            return
+        }
+
+        if let headerFields = response.allHeaderFields as? [String: String] {
             let cookies = HTTPCookie.cookies(withResponseHeaderFields: headerFields, for: url)
             print("COOKIES: \(cookies)")
             cookies.forEach { cookie in
-              //webView.configuration.websiteDataStore.httpCookieStore.setCookie(cookie)
+                //webView.configuration.websiteDataStore.httpCookieStore.setCookie(cookie)
             }
-          }
+        }
 
-          decisionHandler(.allow)
+        decisionHandler(.allow)
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
@@ -312,9 +331,54 @@ extension WebViewController: WKNavigationDelegate {
     }
 
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        // TODO: handle error
-        print("WebView error: \(error)")
+
         self.isLoading = false
+
+        let nsError = error as NSError
+        let failedUrl = nsError.userInfo[NSURLErrorFailingURLErrorKey] as? URL
+
+        let title: String
+        let message: String
+
+        switch (nsError.domain, nsError.code) {
+        case (NSURLErrorDomain, NSURLErrorTimedOut):
+            title = "Timeout"
+            message = "Your connection timed out.\nPlease try again."
+
+        case (NSURLErrorDomain, NSURLErrorNotConnectedToInternet):
+            title = "No Internet Connection"
+            message = "It looks like there was a problem with your connection.\nPlease try again."
+
+        case (NSURLErrorDomain, NSURLErrorCancelled):
+            return
+
+        case ("WebKitErrorDomain", 102): // Frame load interrupted - don's show error when load is canceled
+            return
+
+        default:
+            title = "Oops!"
+            message = "Something went wrong.\nPlease try again."
+        }
+
+        print("WebView error: \(error)")
+
+        let vc = delegate as? UIViewController ?? self
+        let vm = MMAlertVM(
+            icon: .geoLeafAlert,
+            title: title,
+            message: message,
+            actions: [
+                MMAlertAction(title: "Retry", style: .primary, handler: { [weak self] in
+                    if let url = failedUrl {
+                        self?.loadURL(url)
+                    } else {
+                        self?.reloadInitURL()
+                    }
+                })
+            ]
+        )
+        let pop = MMPopupView(viewModel: vm)
+        pop.show(over: vc)
     }
 }
 

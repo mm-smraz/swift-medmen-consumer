@@ -45,11 +45,11 @@ class AppVersionManager {
             // Hide last reqVersionAlert if presented
             reqVersionAlert?.view.removeFromSuperview()
 
-            let vm = OverlayAlertVM(icon: .geoLeaf, title: "Please Update MedMen", message: "This version of the app is no longer supported. Please install the latest version.", actions: [
-                OverlayAlertAction(title: "Update", style: .primary, handler: { [weak self] in
+            let vm = MMAlertVM(icon: .geoLeaf, title: "Please Update MedMen", message: "This version of the app is no longer supported. Please install the latest version.", actions: [
+                MMAlertAction(title: "Update", style: .primary, handler: { [weak self] in
                     self?.openAppStore()
                 }),
-                OverlayAlertAction(title: "Learn More", style: .secondary, handler: { [weak self] in
+                MMAlertAction(title: "Learn More", style: .secondary, handler: { [weak self] in
                     self?.showLearnMore()
                 })
             ])

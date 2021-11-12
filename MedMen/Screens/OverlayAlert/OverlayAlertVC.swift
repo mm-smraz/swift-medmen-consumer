@@ -9,7 +9,7 @@ import UIKit
 
 class OverlayAlertVC: MedMenViewController {
 
-    var viewModel: OverlayAlertVM!
+    var viewModel: MMAlertVM!
 
     @IBOutlet private weak var contentStack: UIStackView!
 
@@ -19,7 +19,7 @@ class OverlayAlertVC: MedMenViewController {
 
     @IBOutlet private weak var buttonsStack: UIStackView!
 
-    static func instantiateFromStoryboard(viewModel: OverlayAlertVM) -> OverlayAlertVC {
+    static func instantiateFromStoryboard(viewModel: MMAlertVM) -> OverlayAlertVC {
         // swiftlint:disable:next force_unwrapping
         let alertVC = R.storyboard.overlayAlert.instantiateInitialViewController()!
         alertVC.modalPresentationStyle = .fullScreen
@@ -28,7 +28,7 @@ class OverlayAlertVC: MedMenViewController {
     }
 
     @discardableResult
-    static func show(in window: UIWindow, viewModel: OverlayAlertVM) -> OverlayAlertVC {
+    static func show(in window: UIWindow, viewModel: MMAlertVM) -> OverlayAlertVC {
         let alertVC = OverlayAlertVC.instantiateFromStoryboard(viewModel: viewModel)
         window.addSubview(alertVC.view)
         alertVC.view.frame = window.bounds
@@ -37,7 +37,7 @@ class OverlayAlertVC: MedMenViewController {
     }
 
     @discardableResult
-    static func show(in vc: UIViewController, viewModel: OverlayAlertVM) -> OverlayAlertVC {
+    static func show(in vc: UIViewController, viewModel: MMAlertVM) -> OverlayAlertVC {
         let alertVC = Self.instantiateFromStoryboard(viewModel: viewModel)
         vc.present(alertVC, animated: true, completion: nil)
         return alertVC
