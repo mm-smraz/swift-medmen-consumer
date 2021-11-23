@@ -138,13 +138,15 @@ extension MainTabController: UITabBarDelegate {
             return
         }
 
-        switch site.action {
-        case .url(let url):
-            webViewC.loadURL(url)
-        case .javaScript(let js):
-            webViewC.runJavascript(js)
-        case .webFunction(let wf):
-            webViewC.runWebFunction(wf)
+        webViewC.runWebFunction(site.webFunction) { [weak self] result in
+            switch result {
+            case .success:
+                print("JS tab switch function succeeded")
+
+            case .failure:
+                // Load url if the JS function failed
+                self?.webViewC.loadURL(site.url)
+            }
         }
 
         if deselectTabAfterDelay {

@@ -9,33 +9,40 @@ import UIKit
 
 enum MMWebSites {
 
-    enum Action {
-        case url(url: URL)
-        case javaScript(js: String)
-        case webFunction(wf: MMWebFunction)
-    }
-
-    case shop // = "/shop"
-    case orders // = "/?userAgent=orderhistory"
-    case account // = "/?userAgent=profile"
-    case bag // = "/?userAgent=cart"
+    case shop
+    case orders
+    case account
+    case bag
 
     static var initialUrl: URL {
-        // swiftlint:disable:next force_unwrapping
-        return URL(string: MMConstants.baseUrl + "/shop")!
+        return Self.shop.url
     }
 
-    var action: Action {
+    var url: URL {
+        // swiftlint:disable force_unwrapping
         switch self {
         case .shop:
-            // swiftlint:disable:next force_unwrapping
-            return .url(url: URL(string: MMConstants.baseUrl + "/shop")!)
+            return URL(string: MMConstants.baseUrl + "/shop/app")!
         case .orders:
-            return .webFunction(wf: .sidebarNavigation(identifier: "orderhistory"))
+            return URL(string: MMConstants.baseUrl + "/?userAgent=orderhistory")!
         case .account:
-            return .webFunction(wf: .sidebarNavigation(identifier: "profile"))
+            return URL(string: MMConstants.baseUrl + "/?userAgent=profile")!
         case .bag:
-            return .webFunction(wf: .sidebarNavigation(identifier: "cart"))
+            return URL(string: MMConstants.baseUrl + "/?userAgent=cart")!
+        }
+        // swiftlint:enable force_unwrapping
+    }
+
+    var webFunction: MMWebFunction {
+        switch self {
+        case .shop:
+            return .shopNavigation
+        case .orders:
+            return .sidebarNavigation(identifier: "orderhistory")
+        case .account:
+            return .sidebarNavigation(identifier: "profile")
+        case .bag:
+            return .sidebarNavigation(identifier: "cart")
         }
     }
 }

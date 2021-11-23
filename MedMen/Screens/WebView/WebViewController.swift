@@ -141,20 +141,23 @@ class WebViewController: MedMenViewController {
         self.loadURL(url)
     }
 
-    func runJavascript(_ js: String) {
+    func runJavascript(_ js: String, completion: ((_ result: Result<Any?, Error>) -> Void)? = nil) {
         webView.evaluateJavaScript(js) { (result, error) in
             if let res = result {
                 print("WebView JS result: \(res)")
+                completion?(.success(res))
             } else if let err = error {
                 print("WebView JS error: \(err)")
+                completion?(.failure(err))
             } else {
                 print("WebView JS run finished")
+                completion?(.success(nil))
             }
         }
     }
 
-    func runWebFunction(_ webFunction: MMWebFunction) {
-        runJavascript(webFunction.jsCode)
+    func runWebFunction(_ webFunction: MMWebFunction, completion: ((_ result: Result<Any?, Error>) -> Void)? = nil) {
+        runJavascript(webFunction.jsCode, completion: completion)
     }
 
     func loadURL(_ url: URL) {

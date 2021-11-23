@@ -8,6 +8,7 @@
 import Foundation
 
 enum MMWebFunction {
+    case shopNavigation
     case sidebarNavigation(identifier: String)
     case googleHandler(tokenId: String)
 
@@ -16,6 +17,8 @@ enum MMWebFunction {
     var jsCode: String {
         var js = MMWebFunction.rootObject + "."
         switch self {
+        case .shopNavigation:
+            js += "shopNavigation()"
         case let .sidebarNavigation(identifier):
             js += "sidebarNavigation('\(identifier)')"
         case let .googleHandler(tokenId):
