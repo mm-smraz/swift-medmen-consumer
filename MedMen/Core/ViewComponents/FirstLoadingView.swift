@@ -52,7 +52,7 @@ class FirstLoadingView: UIView {
         if animated {
             UIView.animate(withDuration: self.animationDuration) {
                 self.alpha = 1
-            } completion: { (finished) in
+            } completion: { (_) in
 
             }
         } else {
@@ -64,7 +64,7 @@ class FirstLoadingView: UIView {
         if animated {
             UIView.animate(withDuration: self.animationDuration) {
                 self.alpha = 0
-            } completion: { (finished) in
+            } completion: { (_) in
                 self.removeFromSuperview()
             }
         } else {

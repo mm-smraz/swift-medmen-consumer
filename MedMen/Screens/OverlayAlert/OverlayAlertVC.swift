@@ -53,7 +53,9 @@ class OverlayAlertVC: MedMenViewController {
     private func setupUI() {
         iconImageV.image = viewModel.icon?.image
         iconImageV.isHidden = iconImageV.image == nil
+        titleLabel.font = UIFont.MM.title
         titleLabel.text = viewModel.title
+        messageLabel.font = UIFont.MM.text
         messageLabel.text = viewModel.message
         messageLabel.isHidden = messageLabel.text == nil
 

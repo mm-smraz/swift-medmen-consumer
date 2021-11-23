@@ -78,7 +78,7 @@ class MainTabController: MedMenViewController {
         tabBar.backgroundImage = UIImage()
         tabBar.tintColor = UIColor.MM.primaryBlack
         tabBar.unselectedItemTintColor = UIColor.MM.darkerGray
-        tabBar.backgroundColor = .white
+        tabBar.backgroundColor = UIColor.white
         tabBar.layer.shadowColor = UIColor.MM.mediumLightGray.cgColor
         tabBar.layer.shadowOffset = CGSize(width: 0, height: -0.5)
         tabBar.layer.shadowOpacity = 1

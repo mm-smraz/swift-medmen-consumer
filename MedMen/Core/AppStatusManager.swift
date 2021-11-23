@@ -27,8 +27,8 @@ class AppStatusManager {
 
         if MMRemoteConfig.shared.appIsKilled {
 
-            let vm = MMAlertVM(icon: .geoLeaf, title: "We’ll Be Back Soon", message: "Sorry, we’re down for maintenance. In the meantime, place an order online through medmen.com.", actions: [
-                MMAlertAction(title: "Go to MedMen.com", style: .primary, handler: { [weak self] in
+            let vm = MMAlertVM(icon: .geoLeaf, title: LOC.lbl_WE_WLL_BE_BACK(), message: LOC.msg_ERROR_APP_KILLED(), actions: [
+                MMAlertAction(title: LOC.btn_GO_TO_WEB(), style: .primary, handler: { [weak self] in
                     self?.openMedMenCom()
                 })
             ])

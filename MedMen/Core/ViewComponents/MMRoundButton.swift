@@ -56,7 +56,7 @@ class MMRoundButton: BGColorButton {
     private func applyStyle() {
         self.layer.cornerRadius = 5
         self.clipsToBounds = true
-        self.titleLabel?.font = UIFont.appFont(ofSize: 14, weight: .demiBold)
+        self.titleLabel?.font = UIFont.MM.button
 
         switch style {
         case .primaryRed:

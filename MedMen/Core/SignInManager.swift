@@ -154,11 +154,11 @@ extension SignInManager.SingInError: DisplayableError {
     var message: String? {
         switch self {
         case .wrongSingInUrlFormat, .wrongConfiguration, .unknownError:
-            return "Something went wrong. Please try it again later."
+            return LOC.msg_ERROR_GENERAL()
         case .singInCanceled:
             return nil
         case .noAccessToken:
-            return "Sign in failed."
+            return LOC.msg_ERROR_SIGNIN()
         case .signInError(let error):
             return error.localizedDescription
         }

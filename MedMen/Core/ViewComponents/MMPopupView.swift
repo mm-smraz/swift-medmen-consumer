@@ -49,8 +49,10 @@ class MMPopupView: UIView {
         iconImageV.isHidden = iconImageV.image == nil
         titleLabel.text = viewModel.title
         titleLabel.isHidden = titleLabel.text == nil
+        titleLabel.font = UIFont.MM.title
         messageLabel.text = viewModel.message
         messageLabel.isHidden = messageLabel.text == nil
+        messageLabel.font = UIFont.MM.text
 
         actionsStack.subviews.forEach {
             actionsStack.removeArrangedSubview($0)
@@ -92,7 +94,7 @@ class MMPopupView: UIView {
         if animated {
             UIView.animate(withDuration: self.animationDuration) {
                 self.alpha = 1
-            } completion: { (finished) in
+            } completion: { (_) in
 
             }
         } else {
@@ -104,7 +106,7 @@ class MMPopupView: UIView {
         if animated {
             UIView.animate(withDuration: self.animationDuration) {
                 self.alpha = 0
-            } completion: { (finished) in
+            } completion: { (_) in
                 self.removeFromSuperview()
             }
         } else {

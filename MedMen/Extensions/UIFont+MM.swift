@@ -10,6 +10,13 @@ import UIKit
 
 extension UIFont {
 
+    // swiftlint:disable:next type_name
+    enum MM {
+        static let title = UIFont.preferredFont(forTextStyle: .title1)
+        static let text = UIFont.preferredFont(forTextStyle: .body)
+        static let button = UIFont.preferredFont(forTextStyle: .headline)
+    }
+
     enum FontWeight {
         case normal
         case medium
@@ -19,34 +26,16 @@ extension UIFont {
     }
 
     static func appFont(ofSize size: CGFloat, weight: FontWeight = .normal) -> UIFont {
-        let name: String
-        switch weight {
-        case .normal:
-            name = "Avenir Next"
-        case .medium:
-            name = "AvenirNext-Medium"
-        case .demiBold:
-            name = "AvenirNext-DemiBold"
-        case .bold:
-            name = "AvenirNext-Bold"
-        case .italic:
-            name = "AvenirNext-Italic"
-        }
-        if let font = UIFont(name: name, size: size) {
-            return font
-        }
-        assertionFailure("Font '\(name)' is missing")
-
         let backupFont: UIFont
         switch weight {
         case .normal:
             backupFont = UIFont.systemFont(ofSize: size, weight: .regular)
         case .medium:
-            backupFont = UIFont.systemFont(ofSize: size, weight: .medium)
+            backupFont = UIFont.systemFont(ofSize: size, weight: .regular)
         case .demiBold:
-            backupFont = UIFont.systemFont(ofSize: size, weight: .semibold)
+            backupFont = UIFont.systemFont(ofSize: size, weight: .medium)
         case .bold:
-            backupFont = UIFont.systemFont(ofSize: size, weight: .bold)
+            backupFont = UIFont.systemFont(ofSize: size, weight: .semibold)
         case .italic:
             backupFont = UIFont.italicSystemFont(ofSize: size)
         }

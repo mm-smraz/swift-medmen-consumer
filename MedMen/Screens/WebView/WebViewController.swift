@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 import AppAuth
 
-protocol WebViewControllerDelegate: class {
+protocol WebViewControllerDelegate: AnyObject {
     func webViewControllerHandleAction(webViewController: WebViewController, action: MMWebAction)
     func webViewControllerLoadingStateChanged(webViewController: WebViewController, isLoading: Bool)
 }
@@ -180,7 +180,7 @@ extension WebViewController: WKUIDelegate {
                  completionHandler: @escaping () -> Void) {
 
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+        alertController.addAction(UIAlertAction(title: LOC.btn_OK(), style: .default, handler: { _ in
             completionHandler()
         }))
 
@@ -193,11 +193,11 @@ extension WebViewController: WKUIDelegate {
 
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
 
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+        alertController.addAction(UIAlertAction(title: LOC.btn_OK(), style: .default, handler: { _ in
             completionHandler(true)
         }))
 
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { _ in
+        alertController.addAction(UIAlertAction(title: LOC.btn_CANCEL(), style: .default, handler: { _ in
             completionHandler(false)
         }))
 
@@ -214,7 +214,7 @@ extension WebViewController: WKUIDelegate {
             textField.text = defaultText
         }
 
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+        alertController.addAction(UIAlertAction(title: LOC.btn_OK(), style: .default, handler: { _ in
             if let text = alertController.textFields?.first?.text {
                 completionHandler(text)
             } else {
@@ -222,7 +222,7 @@ extension WebViewController: WKUIDelegate {
             }
         }))
 
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { _ in
+        alertController.addAction(UIAlertAction(title: LOC.btn_CANCEL(), style: .default, handler: { _ in
             completionHandler(nil)
         }))
 
@@ -320,10 +320,10 @@ extension WebViewController: WKNavigationDelegate {
             let vc = delegate as? UIViewController ?? self
             let vm = MMAlertVM(
                 icon: .geoLeafSleep,
-                title: "Oops!",
-                message: "We’re experiencing a temporary outage, and are working hard to get back up and running soon.",
+                title: LOC.lbl_OOPS(),
+                message: LOC.msg_ERROR_OUTAGE(),
                 actions: [
-                    MMAlertAction(title: "Retry App", style: .primary, handler: { [weak self] in
+                    MMAlertAction(title: LOC.btn_RETRY_APP(), style: .primary, handler: { [weak self] in
                         self?.loadURL(url)
                     })
                 ]
@@ -357,12 +357,12 @@ extension WebViewController: WKNavigationDelegate {
 
         switch (nsError.domain, nsError.code) {
         case (NSURLErrorDomain, NSURLErrorTimedOut):
-            title = "Timeout"
-            message = "Your connection timed out.\nPlease try again."
+            title = LOC.lbl_ERROR_TIMEOUT()
+            message = LOC.msg_ERROR_TIMEOUT()
 
         case (NSURLErrorDomain, NSURLErrorNotConnectedToInternet):
-            title = "No Internet Connection"
-            message = "It looks like there was a problem with your connection.\nPlease try again."
+            title = LOC.lbl_ERROR_NO_CONNECTION()
+            message = LOC.msg_ERROR_NO_CONNECTION()
 
         case (NSURLErrorDomain, NSURLErrorCancelled):
             return
@@ -371,8 +371,8 @@ extension WebViewController: WKNavigationDelegate {
             return
 
         default:
-            title = "Oops!"
-            message = "Something went wrong.\nPlease try again."
+            title = LOC.lbl_OOPS()
+            message = LOC.msg_ERROR_GENERAL()
         }
 
         print("WebView error: \(error)")
@@ -383,7 +383,7 @@ extension WebViewController: WKNavigationDelegate {
             title: title,
             message: message,
             actions: [
-                MMAlertAction(title: "Retry", style: .primary, handler: { [weak self] in
+                MMAlertAction(title: LOC.btn_RETRY(), style: .primary, handler: { [weak self] in
                     if let url = failedUrl {
                         self?.loadURL(url)
                     } else {

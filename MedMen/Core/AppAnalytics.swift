@@ -11,7 +11,7 @@ import Firebase
 import Sentry
 
 enum AnalyticsEvent {
-
+    case signIn
 }
 
 // MARK: -
@@ -72,6 +72,7 @@ fileprivate extension AnalyticsEvent {
     
     var name: String {
         switch self {
+        case .signIn: return "Sign In"
         }
     }
 

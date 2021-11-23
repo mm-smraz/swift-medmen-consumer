@@ -65,10 +65,10 @@ extension MMWebSites {
 
     var title: String {
         switch self {
-        case .shop: return "Shop"
-        case .orders: return "Orders"
-        case .account: return "Account"
-        case .bag: return "Bag"
+        case .shop: return LOC.tab_SHOP()
+        case .orders: return LOC.tab_ORDERS()
+        case .account: return LOC.tab_ACCOUNT()
+        case .bag: return LOC.tab_BAG()
         }
     }
 

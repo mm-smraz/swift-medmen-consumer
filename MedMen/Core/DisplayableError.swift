@@ -20,7 +20,7 @@ extension UIAlertController {
             return false
         }
         let alert = UIAlertController(title: error.title, message: error.message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (_) in
+        alert.addAction(UIAlertAction(title: LOC.btn_OK(), style: .cancel, handler: { (_) in
             okAction?()
         }))
         vc.present(alert, animated: true, completion: nil)
@@ -41,7 +41,7 @@ extension MMPopupView {
             title: error.title ?? "",
             message: error.message,
             actions: [
-                MMAlertAction(title: "OK", style: .primary, handler: {
+                MMAlertAction(title: LOC.btn_OK(), style: .primary, handler: {
                     okAction?()
                 })
             ]

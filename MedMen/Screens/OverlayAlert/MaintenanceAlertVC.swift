@@ -9,11 +9,8 @@ import UIKit
 
 class MaintenanceAlertVC: MedMenViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var messageLabel: UILabel!
 
     static func instantiateFromStoryboard() -> MaintenanceAlertVC {
         // swiftlint:disable:next force_unwrapping
@@ -29,6 +26,20 @@ class MaintenanceAlertVC: MedMenViewController {
         alertVC.view.frame = window.bounds
         alertVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         return alertVC
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        setupUI()
+    }
+
+    private func setupUI() {
+        titleLabel.font = UIFont.MM.title
+        titleLabel.text = LOC.lbl_WE_WLL_BE_BACK()
+        messageLabel.font = UIFont.MM.text
+        messageLabel.text = LOC.msg_ERROR_MAINTENANCE()
     }
 
     // MARK: - Actions

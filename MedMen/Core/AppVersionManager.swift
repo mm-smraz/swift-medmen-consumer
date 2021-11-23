@@ -45,11 +45,11 @@ class AppVersionManager {
             // Hide last reqVersionAlert if presented
             reqVersionAlert?.view.removeFromSuperview()
 
-            let vm = MMAlertVM(icon: .geoLeaf, title: "Please Update MedMen", message: "This version of the app is no longer supported. Please install the latest version.", actions: [
-                MMAlertAction(title: "Update", style: .primary, handler: { [weak self] in
+            let vm = MMAlertVM(icon: .geoLeaf, title: LOC.lbl_PLEASE_UPDATE(), message: LOC.msg_PLEASE_UPDATE(), actions: [
+                MMAlertAction(title: LOC.btn_UPDATE(), style: .primary, handler: { [weak self] in
                     self?.openAppStore()
                 }),
-                MMAlertAction(title: "Learn More", style: .secondary, handler: { [weak self] in
+                MMAlertAction(title: LOC.btn_LEARN_MORE(), style: .secondary, handler: { [weak self] in
                     self?.showLearnMore()
                 })
             ])
@@ -68,12 +68,12 @@ class AppVersionManager {
                 return
             }
 
-            let alert = UIAlertController(title: "Update Available", message: "For the best shopping experience, please update now.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Not Now", style: .cancel, handler: { [weak self] (_) in
+            let alert = UIAlertController(title: LOC.lbl_UPDATE_AVAILABLE(), message: LOC.msg_UPDATE_AVAILABLE(), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: LOC.btn_NOT_NOW(), style: .cancel, handler: { [weak self] (_) in
                 self?.currentAlert = nil
                 UserDefaults.standard.checkedVersion = cVer
             }))
-            alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { [weak self] (_) in
+            alert.addAction(UIAlertAction(title: LOC.btn_UPDATE(), style: .default, handler: { [weak self] (_) in
                 self?.currentAlert = nil
                 UserDefaults.standard.checkedVersion = cVer
                 self?.openAppStore()

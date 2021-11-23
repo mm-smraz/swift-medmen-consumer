@@ -1,0 +1,51 @@
+/* 
+  Localizables.strings
+  MedMen
+
+  Created by Jan Zimandl on 18.11.2021.
+  
+*/
+
+// MARK: - General
+
+"BTN_OK" = "OK";
+"BTN_CANCEL" = "Cancel";
+
+"LBL_OOPS" = "Oops!";
+
+"BTN_RETRY" = "Retry";
+"BTN_RETRY_APP" = "Retry App";
+"BTN_UPDATE" = "Update";
+"BTN_LEARN_MORE" = "Learn More";
+"BTN_NOT_NOW" = "Not Now";
+
+// MARK: - Sites
+
+"TAB_SHOP" = "Shop";
+"TAB_ORDERS" = "Orders";
+"TAB_ACCOUNT" = "Account";
+"TAB_BAG" = "Bag";
+
+// MARK: - AppVersions
+
+"LBL_PLEASE_UPDATE" = "Please Update MedMen";
+"MSG_PLEASE_UPDATE" = "This version of the app is no longer supported. Please install the latest version.";
+"LBL_UPDATE_AVAILABLE" = "Update Available";
+"MSG_UPDATE_AVAILABLE" = "For the best shopping experience, please update now.";
+
+// MARK: - Errors
+
+"MSG_ERROR_GENERAL" = "Something went wrong.\nPlease try again.";
+"MSG_ERROR_OUTAGE" = "We’re experiencing a temporary outage, and are working hard to get back up and running soon.";
+"LBL_ERROR_TIMEOUT" = "Timeout";
+"MSG_ERROR_TIMEOUT" = "Your connection timed out.\nPlease try again.";
+"LBL_ERROR_NO_CONNECTION" = "No Internet Connection";
+"MSG_ERROR_NO_CONNECTION" = "It looks like there was a problem with your connection.\nPlease try again.";
+"LBL_WE_WLL_BE_BACK" = "We’ll Be Back Soon";
+"MSG_ERROR_MAINTENANCE" = "Sorry, we’re down for scheduled maintenance. In the meantime, connect with us on social.";
+"MSG_ERROR_APP_KILLED" = "Sorry, we’re down for maintenance. In the meantime, place an order online through medmen.com.";
+"BTN_GO_TO_WEB" = "Go to MedMen.com";
+"MSG_ERROR_SIGNIN" = "Sign in failed.";
+
+
+

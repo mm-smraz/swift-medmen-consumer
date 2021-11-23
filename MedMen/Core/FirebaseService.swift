@@ -12,11 +12,10 @@ enum FirebaseService {
     static func setup() {
         let env = Environment.current
         let filename = env == .production ? "GoogleService-Info" : "GoogleService-Info-develop"
-        let filePath = Bundle.main.path(forResource: filename, ofType: "plist")
 
-        guard let fileopts = FirebaseOptions(contentsOfFile: filePath!) else {
+        guard let filePath = Bundle.main.path(forResource: filename, ofType: "plist"), let firOpts = FirebaseOptions(contentsOfFile: filePath) else {
             fatalError("Couldn't load config file")
         }
-        FirebaseApp.configure(options: fileopts)
+        FirebaseApp.configure(options: firOpts)
     }
 }
