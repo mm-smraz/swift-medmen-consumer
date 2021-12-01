@@ -2,13 +2,13 @@ steps:
   - task: InstallAppleCertificate@2
     displayName: "Install an Apple certificate"
     inputs:
-      certSecureFile: enterpriseVSTS_0925.p12
+      certSecureFile: appstore_1130.p12
       certPwd: $(P12password)
 
   - task: InstallAppleProvisioningProfile@1
     displayName: "Install an Apple provisioning profile"
     inputs:
-      provProfileSecureFile: InHouse_com.medmen.Medmen.ent.mobileprovision
+      provProfileSecureFile: appstore_com.medmen.Medmen.mobileprovision
 
   - script: |
       bin/buildVersion $(System.DefaultWorkingDirectory) $(Build.BuildId) $(majorVersion)
@@ -36,18 +36,18 @@ steps:
     displayName: Bundle Install
 
   - script: |
-      bundle exec fastlane medmenqa_enterprise_archive
+      bundle exec fastlane medmen_archive
     displayName: Archive IPA
     
   - task: CopyFiles@2
     displayName: "Copy Files"
     inputs:
       SourceFolder: $(System.DefaultWorkingDirectory)
-      Contents: "build/MedMenQA.ipa"
+      Contents: "build/MedMen.ipa"
       TargetFolder: $(Build.ArtifactStagingDirectory)
 
   - task: PublishBuildArtifacts@1
-    displayName: "Publish Artifact: MedMenQA"
+    displayName: "Publish Artifact: MedMen"
     inputs:
       PathtoPublish: $(Build.ArtifactStagingDirectory)
-      ArtifactName: "MedMenQA"
+      ArtifactName: "MedMen"

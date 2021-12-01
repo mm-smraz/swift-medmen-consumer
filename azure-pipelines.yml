@@ -31,18 +31,17 @@ jobs:
     steps:
       - template: azure-pipelines/MedMenQA.yml
 
-  # - job: MedMen
-  #   condition: |
-  #     or
-  #     (
-  #       eq(variables['Build.SourceBranch'], 'refs/heads/develop'),
-  #       contains(variables['Build.SourceBranch'], 'refs/tags/release'),
-  #       contains(variables['Build.SourceBranch'], 'refs/tags/hotfix'),
-  #       contains(variables['Build.SourceBranch'], 'refs/tags/task'),
-  #       contains(variables['Build.SourceBranch'], 'refs/heads/task')
-  #     )
-  #   pool:
-  #     vmImage: "macos-latest"
+  - job: MedMen
+    condition: |
+      or
+      (
+        eq(variables['Build.SourceBranch'], 'refs/heads/develop'),
+        contains(variables['Build.SourceBranch'], 'refs/tags/release'),
+        contains(variables['Build.SourceBranch'], 'refs/tags/hotfix'),
+        contains(variables['Build.SourceBranch'], 'refs/tags/task')
+      )
+    pool:
+      vmImage: "macos-latest"
 
-  #   steps:
-  #     - template: azure-pipelines/MedMen.yml
+    steps:
+      - template: azure-pipelines/MedMen.yml

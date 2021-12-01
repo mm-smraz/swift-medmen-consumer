@@ -1,0 +1,34 @@
+#!/bin/bash
+
+set -ex
+
+## This script is to only run on Azure DevOps
+## First argument should be $(System.DefaultWorkingDirectory)
+## Second argument should be $(Build.BuildId)
+## Third argument is current mainline version 
+
+working_directory=$1
+build_id=$2
+major_version=$3
+target_plist="$working_directory/MyMedMen/Info.plist"
+qa_plist="$working_directory/MyMedMen/InfoQA.plist"
+
+git=$(sh /etc/profile; which git)
+commitCount=`$git rev-list HEAD --count`
+dateNow=`date +%Y%m%d`
+bundleVersion="$major_version.$commitCount.$dateNow"
+
+## Public facing version
+function tagBundleShortVersionString() {
+  /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $bundleVersion" "$target_plist"
+  /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $bundleVersion" "$qa_plist"
+}
+
+## Internal version
+function tagBundleVersion() {
+  /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $build_id" "$target_plist"
+  /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $build_id" "$qa_plist"
+}
+
+tagBundleVersion
+tagBundleShortVersionString
