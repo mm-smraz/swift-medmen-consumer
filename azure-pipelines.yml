@@ -1,0 +1,48 @@
+name: $(Build.BuildId)
+trigger:
+  branches:
+    include:
+      - develop
+      - feature/*
+      - fix/*
+      - bug/*
+      - test/*
+      - task/*
+  tags:
+    include:
+      - release/*
+      - hotfix/*
+      - task/*
+
+jobs:
+  - job: MedMenQA
+    condition: |
+      or
+      (
+        eq(variables['Build.SourceBranch'], 'refs/heads/develop'),
+        contains(variables['Build.SourceBranch'], 'refs/tags/release'),
+        contains(variables['Build.SourceBranch'], 'refs/tags/hotfix'),
+        contains(variables['Build.SourceBranch'], 'refs/tags/task'),
+        contains(variables['Build.SourceBranch'], 'refs/heads/task')
+      )
+    pool:
+      vmImage: "macos-latest"
+
+    steps:
+      - template: azure-pipelines/MedMenQA.yml
+
+  # - job: MedMen
+  #   condition: |
+  #     or
+  #     (
+  #       eq(variables['Build.SourceBranch'], 'refs/heads/develop'),
+  #       contains(variables['Build.SourceBranch'], 'refs/tags/release'),
+  #       contains(variables['Build.SourceBranch'], 'refs/tags/hotfix'),
+  #       contains(variables['Build.SourceBranch'], 'refs/tags/task'),
+  #       contains(variables['Build.SourceBranch'], 'refs/heads/task')
+  #     )
+  #   pool:
+  #     vmImage: "macos-latest"
+
+  #   steps:
+  #     - template: azure-pipelines/MedMen.yml

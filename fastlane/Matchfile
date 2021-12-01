@@ -1,0 +1,3 @@
+git_url("git@github.com:mmmg/fastlane-match.git")
+app_identifier(["com.medmen.Medmen", "com.medmen.Medmen.qa"])
+username("digitalproduct@medmen.com")

@@ -1,0 +1,72 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Main Lane for MedMen consumer iOS app"
+
+  lane :pod_install do 
+    cocoapods(podfile: "./Podfile")
+  end
+
+  lane :certs_appstore do 
+    match(
+      app_identifier: "com.medmen.Medmen", 
+      type: "appstore", 
+      force_for_new_devices: false,
+      readonly: true
+    )
+  end
+
+  ## archive appstore version of consumer app
+  lane :medmen_archive do
+    gym(
+      scheme: "MedMen", 
+      export_method: 'app-store',
+      export_options: "./fastlane/ExportOptions.plist",
+      output_directory: "./build", 
+      output_name: 'MedMen.ipa')
+  end
+
+  ## archive development version of consumer app
+  lane :medmenqa_archive do
+    gym(
+      scheme: "MedMenQA", 
+      export_method: 'development',
+      export_options: "./fastlane/ExportOptions.plist", 
+      output_directory: "./build", 
+      output_name: 'MedMenQA.ipa'
+    )
+  end
+
+  ## archive enterprise version of consumer app
+  lane :medmenqa_enterprise_archive do
+    gym(
+      scheme: "MedMenQA",
+      configuration: 'Enterprise',
+      export_method: "enterprise",
+      export_options: {
+        export_method: "enterprise",
+        provisioningProfiles: {
+          "com.medmen.Medmen.ent" => "Match Inhouse com.medmen.Medmen.ent"
+        },
+        teamID: "A4Q6545532"
+      },
+      output_directory: "./build",
+      output_name: 'MedMenQA.ipa'
+    )
+  end
+end
