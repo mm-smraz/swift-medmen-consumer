@@ -43,6 +43,14 @@ class MainTabController: MedMenViewController {
         selectTab(.shop)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if let win = UIApplication.shared.keyWindow {
+            AgeGateManager.shared.checkStatus(in: win)
+        }
+    }
+
     @discardableResult
     func selectTab(_ site: MMWebSites) -> Bool {
         guard let index = tabSites.firstIndex(of: site) else {

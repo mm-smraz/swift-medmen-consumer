@@ -20,12 +20,18 @@ class BGColorButton: UIButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.setupCompleted = true
-        self.refreshBackground()
+        self.initialize()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        self.initialize()
+    }
+
+    private func initialize() {
+        if #available(iOS 15.0, *) {
+            self.configuration = nil
+        }
         self.setupCompleted = true
         self.refreshBackground()
     }

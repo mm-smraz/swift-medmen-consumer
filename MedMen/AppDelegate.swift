@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.checkVersionAndStatus()
     }
 
-    private func checkVersionAndStatus() {
+    func checkVersionAndStatus() {
         guard let win = self.window else {
             return
         }

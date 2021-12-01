@@ -9,10 +9,28 @@ import UIKit
 
 class AppStatusManager {
 
+    enum Status {
+        case running
+        case killed
+        case maintenance
+        case lockedByAge
+    }
+
     static var shared = AppStatusManager()
 
-    private var killedAlertVC: UIViewController?
-    private var maintenanceAlertVC: UIViewController?
+    var status: Status {
+        if AgeGateManager.shared.status == .underAgeLimit {
+            return .lockedByAge
+        } else if MMRemoteConfig.shared.appIsKilled {
+            return .killed
+        } else if MMRemoteConfig.shared.appInMaintenance {
+            return .maintenance
+        } else {
+            return .running
+        }
+    }
+
+    private var overlayVC: UIViewController?
 
     init() {
 
@@ -20,13 +38,13 @@ class AppStatusManager {
 
     func checkStatus(in window: UIWindow) {
 
-        killedAlertVC?.view.removeFromSuperview()
-        killedAlertVC = nil
-        maintenanceAlertVC?.view.removeFromSuperview()
-        maintenanceAlertVC = nil
+        overlayVC?.view.removeFromSuperview()
+        overlayVC = nil
 
-        if MMRemoteConfig.shared.appIsKilled {
-
+        switch status {
+        case .running:
+            break
+        case .killed:
             let vm = MMAlertVM(icon: .geoLeaf, title: LOC.lbl_WE_WLL_BE_BACK(), message: LOC.msg_ERROR_APP_KILLED(), actions: [
                 MMAlertAction(title: LOC.btn_GO_TO_WEB(), style: .primary, handler: { [weak self] in
                     self?.openMedMenCom()
@@ -34,13 +52,17 @@ class AppStatusManager {
             ])
 
             let alert = OverlayAlertVC.show(in: window, viewModel: vm)
-            self.killedAlertVC = alert
-
-        } else if MMRemoteConfig.shared.appInMaintenance {
-
+            self.overlayVC = alert
+        case .maintenance:
             let alert = MaintenanceAlertVC.show(in: window)
-            self.maintenanceAlertVC = alert
-
+            self.overlayVC = alert
+        case .lockedByAge:
+            let vm = AgeGateMV.blockedState
+            let vc = AgeGateVC.instantiateFromStoryboard(viewModel: vm)
+            window.addSubview(vc.view)
+            vc.view.frame = window.bounds
+            vc.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            self.overlayVC = vc
         }
     }
 

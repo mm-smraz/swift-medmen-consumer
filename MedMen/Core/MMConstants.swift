@@ -42,6 +42,18 @@ enum MMConstants {
         #endif
     }
 
+    enum Links {
+        static var termsOfService: URL? {
+            return URL(string: MMConstants.baseUrl + "/terms-use")
+        }
+        static var privacyPolicy: URL? {
+            return URL(string: MMConstants.baseUrl + "/privacy-policy")
+        }
+        static var learnMore: URL? {
+            return MMRemoteConfig.shared.appStoreURL
+        }
+    }
+
     enum GoogleSignIn {
         
         static var clientId: String {

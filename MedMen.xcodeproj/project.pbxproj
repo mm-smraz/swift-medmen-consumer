@@ -43,10 +43,24 @@
 		238728D0273546F1004BC807 /* MMPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238728CE273546F1004BC807 /* MMPopupView.swift */; };
 		238728D4273546FE004BC807 /* MMPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238728D3273546FD004BC807 /* MMPopupView.xib */; };
 		238728D5273546FE004BC807 /* MMPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238728D3273546FD004BC807 /* MMPopupView.xib */; };
+		2389C4E5274BEA6600471781 /* AgeGate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2389C4E4274BEA6600471781 /* AgeGate.storyboard */; };
+		2389C4E6274BEA6600471781 /* AgeGate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2389C4E4274BEA6600471781 /* AgeGate.storyboard */; };
+		2389C4E8274BEA8200471781 /* AgeGateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389C4E7274BEA8200471781 /* AgeGateVC.swift */; };
+		2389C4E9274BEA8200471781 /* AgeGateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389C4E7274BEA8200471781 /* AgeGateVC.swift */; };
+		2389C4EB274CFA9200471781 /* AgeGateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389C4EA274CFA9200471781 /* AgeGateManager.swift */; };
+		2389C4EC274CFA9200471781 /* AgeGateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389C4EA274CFA9200471781 /* AgeGateManager.swift */; };
 		23AAA71527467AE8002E71B7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23AAA71827467AE8002E71B7 /* Localizable.strings */; };
 		23AAA71627467AE8002E71B7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23AAA71827467AE8002E71B7 /* Localizable.strings */; };
 		23AAA71A27467EEF002E71B7 /* RswiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AAA71927467EEF002E71B7 /* RswiftExtension.swift */; };
 		23AAA71B27467EEF002E71B7 /* RswiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AAA71927467EEF002E71B7 /* RswiftExtension.swift */; };
+		23B67631274E456C00E6DAA0 /* XIBLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B67630274E456B00E6DAA0 /* XIBLocalizable.swift */; };
+		23B67632274E456C00E6DAA0 /* XIBLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B67630274E456B00E6DAA0 /* XIBLocalizable.swift */; };
+		23B67634274E45E500E6DAA0 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B67633274E45E500E6DAA0 /* Localizable.swift */; };
+		23B67635274E45E500E6DAA0 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B67633274E45E500E6DAA0 /* Localizable.swift */; };
+		23B67638274E4B9600E6DAA0 /* InteractiveLinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B67637274E4B9600E6DAA0 /* InteractiveLinkLabel.swift */; };
+		23B67639274E4B9600E6DAA0 /* InteractiveLinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B67637274E4B9600E6DAA0 /* InteractiveLinkLabel.swift */; };
+		23B67641274FCDE900E6DAA0 /* AgeGateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B67640274FCDE900E6DAA0 /* AgeGateVM.swift */; };
+		23B67642274FCDE900E6DAA0 /* AgeGateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B67640274FCDE900E6DAA0 /* AgeGateVM.swift */; };
 		23C1927A26FB7E6800DCDD2A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C1927926FB7E6800DCDD2A /* R.generated.swift */; };
 		23C1927B26FB7E6800DCDD2A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C1927926FB7E6800DCDD2A /* R.generated.swift */; };
 		23C1928B26FCCB7B00DCDD2A /* MMWebAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C1928A26FCCB7B00DCDD2A /* MMWebAction.swift */; };
@@ -124,8 +138,15 @@
 		2387287127314932004BC807 /* AppAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAnalytics.swift; sourceTree = "<group>"; };
 		238728CE273546F1004BC807 /* MMPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMPopupView.swift; sourceTree = "<group>"; };
 		238728D3273546FD004BC807 /* MMPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMPopupView.xib; sourceTree = "<group>"; };
+		2389C4E4274BEA6600471781 /* AgeGate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgeGate.storyboard; sourceTree = "<group>"; };
+		2389C4E7274BEA8200471781 /* AgeGateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGateVC.swift; sourceTree = "<group>"; };
+		2389C4EA274CFA9200471781 /* AgeGateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGateManager.swift; sourceTree = "<group>"; };
 		23AAA71727467AE8002E71B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		23AAA71927467EEF002E71B7 /* RswiftExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RswiftExtension.swift; sourceTree = "<group>"; };
+		23B67630274E456B00E6DAA0 /* XIBLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBLocalizable.swift; sourceTree = "<group>"; };
+		23B67633274E45E500E6DAA0 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		23B67637274E4B9600E6DAA0 /* InteractiveLinkLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveLinkLabel.swift; sourceTree = "<group>"; };
+		23B67640274FCDE900E6DAA0 /* AgeGateVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGateVM.swift; sourceTree = "<group>"; };
 		23C1927926FB7E6800DCDD2A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		23C1928A26FCCB7B00DCDD2A /* MMWebAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMWebAction.swift; sourceTree = "<group>"; };
 		23C204DC2719A19B003CE2A4 /* MMRemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMRemoteConfig.swift; sourceTree = "<group>"; };
@@ -233,9 +254,11 @@
 				23C204DC2719A19B003CE2A4 /* MMRemoteConfig.swift */,
 				23C2054B271EA78F003CE2A4 /* AppVersionManager.swift */,
 				233AA36427216A94008EBB68 /* AppStatusManager.swift */,
+				2389C4EA274CFA9200471781 /* AgeGateManager.swift */,
 				2387287127314932004BC807 /* AppAnalytics.swift */,
 				23C205012719A525003CE2A4 /* FirebaseService.swift */,
 				23E4A83F273A6F0200471E08 /* SignInManager.swift */,
+				23B67636274E4B8900E6DAA0 /* Libraries */,
 				23543E7D26F9D53E00E20D44 /* BaseViewControllers */,
 				23C2052D271D72AF003CE2A4 /* ViewComponents */,
 			);
@@ -248,6 +271,7 @@
 				23CEDCF826FCD0B900329A75 /* LaunchScreen.storyboard */,
 				23CEDCE626FCD07400329A75 /* MainTab */,
 				23C1929626FCCD5D00DCDD2A /* WebView */,
+				2389C4E3274BEA4B00471781 /* AgeGate */,
 				23C20520271D71C7003CE2A4 /* OverlayAlert */,
 			);
 			path = Screens;
@@ -261,6 +285,8 @@
 				23543E4226F8D27700E20D44 /* UserDefaults+MM.swift */,
 				23C2053A271D7769003CE2A4 /* UIImage+Color.swift */,
 				23AAA71927467EEF002E71B7 /* RswiftExtension.swift */,
+				23B67633274E45E500E6DAA0 /* Localizable.swift */,
+				23B67630274E456B00E6DAA0 /* XIBLocalizable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -283,6 +309,24 @@
 				23543E6A26F9D42200E20D44 /* DebugController.swift */,
 			);
 			path = BaseViewControllers;
+			sourceTree = "<group>";
+		};
+		2389C4E3274BEA4B00471781 /* AgeGate */ = {
+			isa = PBXGroup;
+			children = (
+				23B67640274FCDE900E6DAA0 /* AgeGateVM.swift */,
+				2389C4E7274BEA8200471781 /* AgeGateVC.swift */,
+				2389C4E4274BEA6600471781 /* AgeGate.storyboard */,
+			);
+			path = AgeGate;
+			sourceTree = "<group>";
+		};
+		23B67636274E4B8900E6DAA0 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				23B67637274E4B9600E6DAA0 /* InteractiveLinkLabel.swift */,
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 		23C1929626FCCD5D00DCDD2A /* WebView */ = {
@@ -440,6 +484,7 @@
 				23C20529271D7223003CE2A4 /* OverlayAlert.storyboard in Resources */,
 				23CEDD0026FCD1C100329A75 /* WebView.storyboard in Resources */,
 				23CEDCEA26FCD07400329A75 /* MainTab.storyboard in Resources */,
+				2389C4E5274BEA6600471781 /* AgeGate.storyboard in Resources */,
 				23CEDCF926FCD0B900329A75 /* LaunchScreen.storyboard in Resources */,
 				23543E3026F4B59B00E20D44 /* Colors.xcassets in Resources */,
 				2313952B272AA48300CF3F48 /* LoaderView.xib in Resources */,
@@ -459,6 +504,7 @@
 				23C2052A271D7223003CE2A4 /* OverlayAlert.storyboard in Resources */,
 				23CEDD0126FCD1C100329A75 /* WebView.storyboard in Resources */,
 				23CEDCEB26FCD07400329A75 /* MainTab.storyboard in Resources */,
+				2389C4E6274BEA6600471781 /* AgeGate.storyboard in Resources */,
 				23CEDCFA26FCD0B900329A75 /* LaunchScreen.storyboard in Resources */,
 				23543E5426F9C76500E20D44 /* Colors.xcassets in Resources */,
 				2313952C272AA48300CF3F48 /* LoaderView.xib in Resources */,
@@ -638,6 +684,7 @@
 				23C204DD2719A19B003CE2A4 /* MMRemoteConfig.swift in Sources */,
 				23C2054C271EA78F003CE2A4 /* AppVersionManager.swift in Sources */,
 				23C2052F271D72C2003CE2A4 /* BGColorButton.swift in Sources */,
+				2389C4E8274BEA8200471781 /* AgeGateVC.swift in Sources */,
 				23DF78D9272C1D9F006B774B /* FirstLoadingView.swift in Sources */,
 				238728CF273546F1004BC807 /* MMPopupView.swift in Sources */,
 				23262DE826BA82B2006A9972 /* MMConstants.swift in Sources */,
@@ -653,12 +700,17 @@
 				23CEDCEE26FCD07400329A75 /* MainTabController.swift in Sources */,
 				23AAA71A27467EEF002E71B7 /* RswiftExtension.swift in Sources */,
 				23543E4326F8D27700E20D44 /* UserDefaults+MM.swift in Sources */,
+				23B67641274FCDE900E6DAA0 /* AgeGateVM.swift in Sources */,
 				23C2053B271D7769003CE2A4 /* UIImage+Color.swift in Sources */,
 				23C20540271D779C003CE2A4 /* MMRoundButton.swift in Sources */,
+				23B67634274E45E500E6DAA0 /* Localizable.swift in Sources */,
 				233AA36527216A94008EBB68 /* AppStatusManager.swift in Sources */,
 				23C20522271D71FF003CE2A4 /* OverlayAlertVC.swift in Sources */,
 				233AA3842721A240008EBB68 /* MaintenanceAlertVC.swift in Sources */,
+				2389C4EB274CFA9200471781 /* AgeGateManager.swift in Sources */,
+				23B67631274E456C00E6DAA0 /* XIBLocalizable.swift in Sources */,
 				23C1928B26FCCB7B00DCDD2A /* MMWebAction.swift in Sources */,
+				23B67638274E4B9600E6DAA0 /* InteractiveLinkLabel.swift in Sources */,
 				23262DE326BA7B23006A9972 /* WebViewController.swift in Sources */,
 				23C1927A26FB7E6800DCDD2A /* R.generated.swift in Sources */,
 				23E4A849273C21AE00471E08 /* MMWebFunction.swift in Sources */,
@@ -678,6 +730,7 @@
 				23C20530271D72C2003CE2A4 /* BGColorButton.swift in Sources */,
 				23139527272AA47500CF3F48 /* LoaderView.swift in Sources */,
 				23C20523271D71FF003CE2A4 /* OverlayAlertVC.swift in Sources */,
+				2389C4EC274CFA9200471781 /* AgeGateManager.swift in Sources */,
 				23C204DE2719A19B003CE2A4 /* MMRemoteConfig.swift in Sources */,
 				23C2053C271D7769003CE2A4 /* UIImage+Color.swift in Sources */,
 				23543E4826F9C76500E20D44 /* AppDelegate.swift in Sources */,
@@ -691,19 +744,24 @@
 				23C2054D271EA78F003CE2A4 /* AppVersionManager.swift in Sources */,
 				23543E4E26F9C76500E20D44 /* UserDefaults+MM.swift in Sources */,
 				23C20541271D779C003CE2A4 /* MMRoundButton.swift in Sources */,
+				2389C4E9274BEA8200471781 /* AgeGateVC.swift in Sources */,
 				23AAA71B27467EEF002E71B7 /* RswiftExtension.swift in Sources */,
 				23E4A841273A6F0200471E08 /* SignInManager.swift in Sources */,
+				23B67639274E4B9600E6DAA0 /* InteractiveLinkLabel.swift in Sources */,
 				23543E4F26F9C76500E20D44 /* WebViewController.swift in Sources */,
 				23DF78DA272C1D9F006B774B /* FirstLoadingView.swift in Sources */,
 				23543E5026F9C76500E20D44 /* AppInfo.swift in Sources */,
 				23E4A851273C254900471E08 /* MMWebSites.swift in Sources */,
 				23543E7A26F9D53700E20D44 /* MedMenViewController.swift in Sources */,
+				23B67632274E456C00E6DAA0 /* XIBLocalizable.swift in Sources */,
 				233AA3852721A240008EBB68 /* MaintenanceAlertVC.swift in Sources */,
 				23C1928C26FCCB7B00DCDD2A /* MMWebAction.swift in Sources */,
 				2387287327314932004BC807 /* AppAnalytics.swift in Sources */,
 				23543E6C26F9D42200E20D44 /* DebugController.swift in Sources */,
 				23C20535271D72E0003CE2A4 /* MMAlertVM.swift in Sources */,
+				23B67642274FCDE900E6DAA0 /* AgeGateVM.swift in Sources */,
 				23E4A84A273C21AE00471E08 /* MMWebFunction.swift in Sources */,
+				23B67635274E45E500E6DAA0 /* Localizable.swift in Sources */,
 				23C1927B26FB7E6800DCDD2A /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

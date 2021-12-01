@@ -26,6 +26,19 @@
 "TAB_ACCOUNT" = "Account";
 "TAB_BAG" = "Bag";
 
+// MARK: - AgeGate
+
+"LBL_AGE_GATE_TITLE" = "Are you 21 years of age or older?";
+"LBL_AGE_GATE_SUBTITLE" = "New York & Florida: 18+ with valid medical ID";
+"BTN_AGE_GATE_OVER" = "I’m at least 21";
+"BTN_AGE_GATE_UNDER" = "I’m not 21 yet";
+"MSG_AGE_GATE_FOOTER" = "By proceeding, you agree to our Terms of Service and Privacy Policy. This site uses cookies. By continuing to browse this MedMen site (and/or any other MedMen website), you accept the use of cookies.";
+"LBL_AGE_GATE_TERMS" = "Terms of Service";
+"LBL_AGE_GATE_POLICY" = "Privacy Policy";
+"LBL_AGE_LOCKED_TITLE" = "You must be 21+ to use the app.";
+"LBL_AGE_LOCKED_SUBTITLE" = "Re-install the app from the App Store when you are of legal age to use the MedMen app.";
+
+
 // MARK: - AppVersions
 
 "LBL_PLEASE_UPDATE" = "Please Update MedMen";

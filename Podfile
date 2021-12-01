@@ -10,7 +10,7 @@ def shared_pods
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
   pod 'Firebase/Crashlytics'
-  pod 'Firebase/Analytics'
+  pod 'Firebase/AnalyticsWithoutAdIdSupport'
   pod 'ReachabilitySwift'
   pod 'R.swift'
   pod 'Sentry', :git => 'https://github.com/getsentry/sentry-cocoa.git', :tag => '7.5.0'

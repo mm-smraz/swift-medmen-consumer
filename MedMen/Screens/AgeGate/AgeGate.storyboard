@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Age GateVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="AgeGateVC" customModule="MedMen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CandyBackground" translatesAutoresizingMaskIntoConstraints="NO" id="I5F-XW-an7">
+                                <rect key="frame" x="0.0" y="84" width="414" height="812"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MMLogo" translatesAutoresizingMaskIntoConstraints="NO" id="TIC-dD-5aD">
+                                <rect key="frame" x="129" y="116" width="156" height="48"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you 21 years of age or older?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZ2-nF-4By">
+                                <rect key="frame" x="20" y="194" width="374" height="23"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York &amp; Florida: 18+ with valid medical ID" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvB-Vf-HOO">
+                                <rect key="frame" x="20" y="227" width="374" height="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQa-C9-mVE" customClass="MMRoundButton" customModule="MedMen" customModuleProvider="target">
+                                <rect key="frame" x="20" y="264" width="374" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="W5o-xz-quk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="tintColor" name="mmPrimaryRed"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="I’m at least 21"/>
+                                <buttonConfiguration key="configuration" style="plain" title="I’m at least 21">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="overAgeTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="T2x-QS-xhF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hW4-L9-Fdk" customClass="MMRoundButton" customModule="MedMen" customModuleProvider="target">
+                                <rect key="frame" x="20" y="324" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.69545704129999997" green="0.17786425350000001" blue="0.1489785314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qoy-zY-CNm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="I’m not 21 yet"/>
+                                <buttonConfiguration key="configuration" style="plain" title="I’m not 21 yet">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="underAgeTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Z71-Ie-hrK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXz-ay-VQm" customClass="InteractiveLinkLabel" customModule="MedMen" customModuleProvider="target">
+                                <rect key="frame" x="20" y="384" width="374" height="62.5"/>
+                                <string key="text">By proceeding, you agree to our Terms of Service and Privacy Policy. This site uses cookies. By continuing to browse this MedMen site (and/or any other MedMen website), you accept the use of cookies. Learn More.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.69545704129999997" green="0.17786425350000001" blue="0.1489785314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="TZ2-nF-4By" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="0I5-eB-Xr3"/>
+                            <constraint firstItem="hW4-L9-Fdk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="0Jg-fW-cP2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PXz-ay-VQm" secondAttribute="trailing" constant="20" id="2Le-Lm-elH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hW4-L9-Fdk" secondAttribute="trailing" constant="20" id="8gw-ZM-o2L"/>
+                            <constraint firstItem="hW4-L9-Fdk" firstAttribute="top" secondItem="uQa-C9-mVE" secondAttribute="bottom" constant="20" id="9go-4D-QxI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uvB-Vf-HOO" secondAttribute="trailing" constant="20" id="9jk-kT-vjh"/>
+                            <constraint firstItem="TIC-dD-5aD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="EH3-6P-9Hk"/>
+                            <constraint firstItem="TZ2-nF-4By" firstAttribute="top" secondItem="TIC-dD-5aD" secondAttribute="bottom" constant="30" id="H7F-sK-4K1"/>
+                            <constraint firstItem="uvB-Vf-HOO" firstAttribute="top" secondItem="TZ2-nF-4By" secondAttribute="bottom" constant="10" id="Hrj-Rd-kty"/>
+                            <constraint firstAttribute="bottom" secondItem="I5F-XW-an7" secondAttribute="bottom" id="L6N-Vb-3gH"/>
+                            <constraint firstItem="PXz-ay-VQm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="NQw-h0-yLy"/>
+                            <constraint firstItem="PXz-ay-VQm" firstAttribute="top" secondItem="hW4-L9-Fdk" secondAttribute="bottom" constant="20" id="ON5-hT-3wX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uQa-C9-mVE" secondAttribute="trailing" constant="20" id="R6c-4y-riW"/>
+                            <constraint firstItem="uQa-C9-mVE" firstAttribute="top" secondItem="uvB-Vf-HOO" secondAttribute="bottom" constant="20" id="SWl-ji-Gdx"/>
+                            <constraint firstItem="uQa-C9-mVE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="VfI-ag-aJs"/>
+                            <constraint firstItem="I5F-XW-an7" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="aR7-9F-8kw"/>
+                            <constraint firstItem="uvB-Vf-HOO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="fHs-qr-Ipa"/>
+                            <constraint firstItem="TIC-dD-5aD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="72" id="sN8-tO-cwx"/>
+                            <constraint firstAttribute="trailing" secondItem="TZ2-nF-4By" secondAttribute="trailing" constant="20" id="skg-q8-1LS"/>
+                            <constraint firstAttribute="trailing" secondItem="I5F-XW-an7" secondAttribute="trailing" id="vVE-Rx-bXt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="footerLabel" destination="PXz-ay-VQm" id="hpt-zi-kYC"/>
+                        <outlet property="logoImageV" destination="TIC-dD-5aD" id="qhP-8n-HFK"/>
+                        <outlet property="overAgeButton" destination="uQa-C9-mVE" id="ceT-n2-uzV"/>
+                        <outlet property="subtitleLabel" destination="uvB-Vf-HOO" id="ybu-2v-YCr"/>
+                        <outlet property="titleLabel" destination="TZ2-nF-4By" id="qla-KF-gQ3"/>
+                        <outlet property="underAgeButton" destination="hW4-L9-Fdk" id="V42-0v-t4X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2.8985507246376816" y="32.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CandyBackground" width="375" height="812"/>
+        <image name="MMLogo" width="156" height="48"/>
+        <namedColor name="mmPrimaryRed">
+            <color red="0.66666666666666663" green="0.12156862745098039" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

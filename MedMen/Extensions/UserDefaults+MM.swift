@@ -33,4 +33,28 @@ extension UserDefaults {
             self.synchronize()
         }
     }
+
+    var userOver21: Bool? {
+        get {
+            let value = self.value(forKey: #function)
+            let boolValue = value as? Bool
+            return boolValue
+        }
+        set {
+            self.setValue(newValue, forKey: #function)
+            self.synchronize()
+        }
+    }
+
+    var ageLimitSetDate: Date? {
+        get {
+            let value = self.value(forKey: #function)
+            let dateValue = value as? Date
+            return dateValue
+        }
+        set {
+            self.setValue(newValue, forKey: #function)
+            self.synchronize()
+        }
+    }
 }
