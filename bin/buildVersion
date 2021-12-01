@@ -10,8 +10,8 @@ set -ex
 working_directory=$1
 build_id=$2
 major_version=$3
-target_plist="$working_directory/MyMedMen/Info.plist"
-qa_plist="$working_directory/MyMedMen/InfoQA.plist"
+target_plist="$working_directory/MedMen/Info.plist"
+qa_plist="$working_directory/MedMen/InfoQA.plist"
 
 git=$(sh /etc/profile; which git)
 commitCount=`$git rev-list HEAD --count`
